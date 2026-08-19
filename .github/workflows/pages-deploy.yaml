@@ -1,0 +1,25 @@
+name: deploy-pages
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_PAGES_API_TOKEN }}
+          accountId: c0d977ba2937e996cc8e9b8cbacf075d
+          projectName: daniel-personal-website
+          directory: .
+          branch: main
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
