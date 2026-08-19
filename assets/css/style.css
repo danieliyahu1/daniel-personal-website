@@ -246,11 +246,16 @@ img {
   border-color: var(--line);
 }
 
+.hero-photo {
+  display: flex;
+  justify-content: center;
+}
+
 .hero-photo img {
-  width: 100%;
-  max-height: 520px;
+  width: 280px;
+  height: 280px;
   object-fit: cover;
-  border-radius: var(--radius);
+  border-radius: 50%;
   box-shadow: var(--shadow-lg);
 }
 
