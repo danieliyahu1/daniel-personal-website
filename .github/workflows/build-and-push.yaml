@@ -46,6 +46,8 @@ jobs:
           cache-to: type=gha,mode=max
 
       - name: Make image public
-        run: gh api --method POST /user/packages/container/${{ github.repository }}/visibility -f visibility=public
+        run: |
+          PACKAGE="${GITHUB_REPOSITORY//\//%2F}"
+          gh api --method POST "/user/packages/container/${PACKAGE}/visibility" -f visibility=public
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
