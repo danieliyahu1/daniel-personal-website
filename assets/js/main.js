@@ -39,10 +39,36 @@
       var open = navArea.classList.toggle("open");
       navToggle.setAttribute("aria-expanded", String(open));
     });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && navArea.classList.contains("open")) {
+        navArea.classList.remove("open");
+        navToggle.setAttribute("aria-expanded", "false");
+        navToggle.focus();
+      }
+    });
   }
 
   var yearEls = document.querySelectorAll("[data-year]");
   yearEls.forEach(function (el) {
     el.textContent = new Date().getFullYear();
   });
+
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var revealEls = document.querySelectorAll("[data-reveal]");
+  if (!reduceMotion && "IntersectionObserver" in window && revealEls.length) {
+    revealEls.forEach(function (el) {
+      el.classList.add("reveal");
+    });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(function (el) {
+      io.observe(el);
+    });
+  }
 })();

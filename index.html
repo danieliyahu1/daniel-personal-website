@@ -3,18 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Daniel | Software Engineer</title>
-  <meta name="description" content="Daniel. Software engineer building at the intersection of blockchain and AI. Real tools. On-chain assets. AI that reads blockchains. Open source." />
-  <meta name="theme-color" content="#f6f8fc" media="(prefers-color-scheme: light)" />
-  <meta name="theme-color" content="#0d1320" media="(prefers-color-scheme: dark)" />
+  <title>Daniel Eliyahu — Backend Engineer</title>
+  <meta name="description" content="Daniel Eliyahu — Backend engineer in Israel. Production Java microservices, shipped end to end. On-chain tools, built in the open." />
+  <meta name="theme-color" content="#f7f7f8" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#101012" media="(prefers-color-scheme: dark)" />
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
   <meta property="og:type" content="profile" />
-  <meta property="og:title" content="Daniel | Software Engineer" />
-  <meta property="og:description" content="Daniel. Software engineer building at the intersection of blockchain and AI. Real tools. On-chain assets. AI that reads blockchains." />
-  <meta property="og:url" content="https://daniel-personal-website.pages.dev/" />
+  <meta property="og:title" content="Daniel Eliyahu — Backend Engineer" />
+  <meta property="og:description" content="Daniel Eliyahu — Backend engineer. Production Java microservices. On-chain tools, built in the open." />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Daniel | Software Engineer" />
+  <meta name="twitter:title" content="Daniel Eliyahu — Backend Engineer" />
   <script>(function(){try{var t=localStorage.getItem('dani-theme');if(t!=='light'&&t!=='dark'){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.dataset.theme=t;}catch(e){}})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
@@ -22,23 +24,18 @@
 <header class="site-header">
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="site-shell header-inner">
-    <a class="brand" href="index.html">
-      <span class="brand-mark" aria-hidden="true"></span>
-      <span>Daniel</span>
-    </a>
+    <a class="brand" href="index.html">Daniel Eliyahu</a>
     <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="site-menu" aria-label="Menu">☰</button>
     <div class="nav-area" id="site-menu">
       <nav class="site-nav" aria-label="Primary">
         <ul>
           <li><a href="index.html" aria-current="page">Home</a></li>
           <li><a href="work.html">Work</a></li>
-          <li><a href="now.html">Now</a></li>
-          <li><a href="journeys.html">Journeys</a></li>
-          <li><a href="connect.html">Connect</a></li>
+          <li><a href="connect.html">Reach out</a></li>
         </ul>
       </nav>
       <div class="header-tools">
-        <button class="toggle" type="button" data-theme-toggle aria-label="Toggle theme"><span>◐</span><span data-theme-label>Dark</span></button>
+        <button class="toggle" type="button" data-theme-toggle aria-label="Toggle theme"><span data-theme-label>Dark</span></button>
       </div>
     </div>
   </div>
@@ -46,58 +43,120 @@
 
 <main id="main" tabindex="-1">
   <section class="hero">
-    <div class="site-shell hero-grid">
-      <div class="hero-copy">
-        <h1>Daniel</h1>
-        <p class="subtitle">Software engineer. Builder at the intersection of blockchain and AI.</p>
-        <p class="lede">I build tools people actually use. On-chain assets. AI that reads blockchains. Open source that fits into the way you work.</p>
-        <div class="hero-actions">
-          <a class="button primary" href="work.html">See work</a>
-          <a class="button secondary" href="connect.html">Get in touch</a>
-        </div>
+    <div class="site-shell">
+      <h1 class="hero-name">Daniel Eliyahu</h1>
+      <p class="hero-lede">Engineer. Entrepreneur. Traveler.</p>
+      <div class="hero-actions">
+        <a class="button" href="connect.html">Reach out</a>
+        <a class="link-arrow" href="work.html">See what I build →</a>
       </div>
-      <aside class="hero-photo">
-        <img src="assets/img/avatar.svg" alt="Daniel" width="200" height="200" fetchpriority="high" />
-      </aside>
     </div>
   </section>
 
-  <section class="section">
+  <section class="section journey">
+    <div class="site-shell">
+      <p class="eyebrow">The story</p>
+      <p class="journey-lead">From Rehovot to production systems of record — with the Paratroopers and university in between.</p>
+      <div class="journey-list">
+        <div class="journey-row" data-reveal>
+          <span class="journey-num" aria-hidden="true">01</span>
+          <div class="journey-body">
+            <h3>Rehovot</h3>
+            <p>Born and raised. Soccer as a kid. Aharai! — a youth leadership program.</p>
+          </div>
+        </div>
+        <div class="journey-row" data-reveal>
+          <span class="journey-num" aria-hidden="true">02</span>
+          <div class="journey-body">
+            <h3>Akko</h3>
+            <p>Gal Pre-Army Academy — a year of leadership before the army.</p>
+          </div>
+        </div>
+        <div class="journey-row" data-reveal>
+          <span class="journey-num" aria-hidden="true">03</span>
+          <div class="journey-body">
+            <h3>The Paratroopers</h3>
+            <p>Drafted into the Paratroopers. Served as a combat commander.</p>
+          </div>
+        </div>
+        <div class="journey-row" data-reveal>
+          <span class="journey-num" aria-hidden="true">04</span>
+          <div class="journey-body">
+            <h3>Reichman</h3>
+            <p>B.Sc. Computer Science.</p>
+          </div>
+        </div>
+        <div class="journey-row" data-reveal>
+          <span class="journey-num" aria-hidden="true">05</span>
+          <div class="journey-body">
+            <h3>Cognyte</h3>
+            <p>Java microservices that became the system of record — owned end to end, 80% test coverage, zero critical incidents.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section beyond">
+    <div class="site-shell">
+      <p class="eyebrow">Beyond the work</p>
+      <div class="beyond-list">
+        <div class="beyond-row" data-reveal>
+          <span class="beyond-label">Entrepreneurship</span>
+          <p class="beyond-text">I've been through two accelerators — Aharai! and UpStart.</p>
+        </div>
+        <div class="beyond-row" data-reveal>
+          <span class="beyond-label">Traveling</span>
+          <p class="beyond-text">Cities, nature, springs. I travel to find them.</p>
+        </div>
+        <div class="beyond-row" data-reveal>
+          <span class="beyond-label">Cultures</span>
+          <p class="beyond-text">Meeting people from different cultures widens my horizon.</p>
+        </div>
+        <div class="beyond-row" data-reveal>
+          <span class="beyond-label">Hobbies</span>
+          <p class="beyond-text">Running · bachata · yoga</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" data-reveal>
     <div class="site-shell">
       <div class="section-heading">
-        <div>
-          <h2>How I think about software</h2>
-        </div>
-        <p>Three things guide everything I build.</p>
+        <h2>The work that says it best</h2>
+        <p>Two tools. Real people use them.</p>
       </div>
-      <div class="grid" style="grid-template-columns: 1.2fr 0.8fr;">
-        <div class="timeline">
-          <article class="timeline-item">
-            <h3>Open source first</h3>
-            <p>Contribute to what you use. Build what's missing.</p>
-          </article>
-          <article class="timeline-item">
-            <h3>Blockchain for everyone</h3>
-            <p>Real on-chain assets. Three fields. One button. Done. Self-custody. No code required.</p>
-          </article>
-          <article class="timeline-item">
-            <h3>AI that works</h3>
-            <p>Assistants that read a blockchain directly. Balances. Transactions. Blocks. No node. No setup.</p>
-          </article>
-        </div>
-        <div>
-          <article class="note-card">
-            <h3>The day job</h3>
-            <p>Full-stack software. React frontends. Spring Boot backends. Docker-first microservices. AI behind an API gateway.</p>
-            <p><a href="work.html">See the work <span aria-hidden="true">→</span></a></p>
-          </article>
-          <article class="note-card">
-            <h3>What's new</h3>
-            <p>On-chain assets on Kaspa. AI that connects to live blockchains.</p>
-            <p><a href="now.html">See what's new <span aria-hidden="true">→</span></a></p>
-          </article>
-        </div>
+      <div class="feature-list">
+        <a class="feature-item" href="https://github.com/danieliyahu1/kticket" target="_blank" rel="noopener noreferrer">
+          <div>
+            <span class="feature-meta">Kaspa · Live</span>
+            <h3>Kticket</h3>
+            <p>On-chain event ticketing. Tickets people actually own — covenant-bound, self-custody. No middleman.</p>
+          </div>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="feature-item" href="https://github.com/danieliyahu1/forge" target="_blank" rel="noopener noreferrer">
+          <div>
+            <span class="feature-meta">Kaspa · Live</span>
+            <h3>Forge</h3>
+            <p>Your own token on Kaspa, in minutes. Three fields. One button. Done. No code.</p>
+          </div>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
       </div>
+      <p class="section-foot"><a class="link-arrow" href="work.html">All the work →</a></p>
+      <div class="path" aria-label="The path">
+        <span>Web apps</span><i>→</i><span>Full stack</span><i>→</i><span>Microservices</span><i>→</i><span>Blockchain + AI</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="invite" data-reveal>
+    <div class="site-shell">
+      <h2>Reach out</h2>
+      <p>If you're building something that needs honesty — or someone who ships — say hello.</p>
+      <a class="button" href="connect.html">Get in touch</a>
     </div>
   </section>
 </main>
@@ -105,17 +164,18 @@
 <footer class="site-footer">
   <div class="site-shell footer-inner">
     <div>
-      <strong>Daniel</strong>
-      <div class="muted">© <span data-year>2026</span> Daniel</div>
+      <strong class="footer-brand">Daniel Eliyahu</strong>
+      <div class="muted">© <span data-year>2026</span> Daniel Eliyahu</div>
+      <div class="muted">Israel</div>
     </div>
     <nav class="footer-nav">
       <a href="index.html">Home</a>
       <a href="work.html">Work</a>
-      <a href="now.html">Now</a>
-      <a href="journeys.html">Journeys</a>
-      <a href="connect.html">Connect</a>
+      <a href="connect.html">Reach out</a>
     </nav>
     <div class="socials">
+      <a href="mailto:danieliyahu1@gmail.com" rel="me" aria-label="Email"><img src="assets/img/gmail.svg" alt=""></a>
+      <a href="https://www.linkedin.com/in/daniel-eliyahu-543a7017b/" target="_blank" rel="me noopener noreferrer" aria-label="LinkedIn"><img src="assets/img/linkedin.svg" alt=""></a>
       <a href="https://github.com/danieliyahu1" target="_blank" rel="me noopener noreferrer" aria-label="GitHub"><img src="assets/img/github.svg" alt=""></a>
     </div>
   </div>

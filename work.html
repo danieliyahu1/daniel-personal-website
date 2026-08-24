@@ -3,15 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Work — Daniel</title>
-  <meta name="description" content="Projects by Daniel. Each one solves a real problem. On-chain assets on Kaspa. AI that reads blockchains. Open source contributions." />
-  <meta name="theme-color" content="#f6f8fc" media="(prefers-color-scheme: light)" />
-  <meta name="theme-color" content="#0d1320" media="(prefers-color-scheme: dark)" />
+  <title>Work — Daniel Eliyahu</title>
+  <meta name="description" content="Daniel Eliyahu — Backend Engineer. Production Java microservices, shipped end to end. On-chain tools and open source on the side." />
+  <meta name="theme-color" content="#f7f7f8" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#101012" media="(prefers-color-scheme: dark)" />
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
-  <meta property="og:title" content="Work — Daniel" />
-  <meta property="og:description" content="Projects by Daniel. Each one solves a real problem." />
-  <meta property="og:url" content="https://daniel-personal-website.pages.dev/work.html" />
+  <meta property="og:title" content="Work — Daniel Eliyahu" />
+  <meta property="og:description" content="Daniel Eliyahu — Backend Engineer. Production Java microservices, shipped end to end. On-chain tools and open source." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Work — Daniel Eliyahu" />
   <script>(function(){try{var t=localStorage.getItem('dani-theme');if(t!=='light'&&t!=='dark'){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.dataset.theme=t;}catch(e){}})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
@@ -19,23 +23,18 @@
 <header class="site-header">
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="site-shell header-inner">
-    <a class="brand" href="index.html">
-      <span class="brand-mark" aria-hidden="true"></span>
-      <span>Daniel</span>
-    </a>
+    <a class="brand" href="index.html">Daniel Eliyahu</a>
     <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="site-menu" aria-label="Menu">☰</button>
     <div class="nav-area" id="site-menu">
       <nav class="site-nav" aria-label="Primary">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="work.html" aria-current="page">Work</a></li>
-          <li><a href="now.html">Now</a></li>
-          <li><a href="journeys.html">Journeys</a></li>
-          <li><a href="connect.html">Connect</a></li>
+          <li><a href="connect.html">Reach out</a></li>
         </ul>
       </nav>
       <div class="header-tools">
-        <button class="toggle" type="button" data-theme-toggle aria-label="Toggle theme"><span>◐</span><span data-theme-label>Dark</span></button>
+        <button class="toggle" type="button" data-theme-toggle aria-label="Toggle theme"><span data-theme-label>Dark</span></button>
       </div>
     </div>
   </div>
@@ -44,71 +43,90 @@
 <main id="main" tabindex="-1">
   <section class="page-hero">
     <div class="site-shell">
-      <h1>Work</h1>
-      <p>Projects I've built and contributed to. Each one solves a real problem. No demos.</p>
+      <p class="eyebrow">Work</p>
+      <h1>Backend engineer.</h1>
+      <p class="subtitle">Production Java microservices, owned end to end.</p>
+      <p class="lede">Distributed systems. AI coding agents in the daily workflow — from design to deployment.</p>
     </div>
   </section>
 
   <section class="section">
     <div class="site-shell">
       <div class="section-heading">
-        <div>
-          <h2>Blockchain</h2>
-        </div>
-        <p>Real assets. Self-custody. Fully on-chain.</p>
+        <h2>Experience</h2>
+        <p>Where I've shipped.</p>
       </div>
-      <div class="grid">
-        <article class="card">
-          <div class="card-meta">Kaspa · Token creation</div>
+      <div class="work-list">
+        <article class="work-item" data-reveal>
+          <div class="work-meta">Cognyte · 2024–2026</div>
+          <h3>Backend Engineer</h3>
+          <p>Shipped three production microservices that became the system of record for critical business data — design, delivery, and production support, owned end to end.</p>
+          <p>Replaced a legacy media pipeline with convert-on-demand. Files are processed only when someone asks to play. Terabytes saved.</p>
+          <p>80% test coverage. Zero critical incidents.</p>
+          <div class="tags"><span>Java</span><span>Spring Boot</span><span>Kafka</span><span>PostgreSQL</span><span>Docker</span><span>Kubernetes</span></div>
+        </article>
+        <article class="work-item" data-reveal>
+          <div class="work-meta">Jazwares LLC · 2023</div>
+          <h3>Full-Stack Developer Intern</h3>
+          <p>Built the company's B2C website on Node.js and React — a new direct-to-customer channel and smoother cross-functional workflows.</p>
+          <div class="tags"><span>Node.js</span><span>React</span><span>B2C</span></div>
+        </article>
+        <article class="work-item" data-reveal>
+          <div class="work-meta">Google & Reichman University Tech School · 2018–2019</div>
+          <h3>Coding Instructor & Marketing Referent</h3>
+          <p>Taught Python to thirty students. Ran the Facebook campaigns that filled the program.</p>
+          <div class="tags"><span>Python</span><span>Teaching</span><span>Marketing</span></div>
+        </article>
+      </div>
+      <div class="tags core-tags"><span>Java</span><span>Spring Boot</span><span>Kafka</span><span>PostgreSQL</span><span>Elasticsearch</span><span>Docker</span><span>Kubernetes</span><span>Helm</span><span>CI/CD</span><span>MCP Servers</span></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="site-shell">
+      <div class="section-heading">
+        <h2>On my own</h2>
+        <p>Tools I build in the open.</p>
+      </div>
+      <div class="work-list">
+        <article class="work-item" data-reveal>
+          <div class="work-meta">Kaspa · Event ticketing</div>
+          <h3>Kticket</h3>
+          <p>On-chain event ticketing. Tickets are covenant-bound assets that belong to the holder. Organizers deploy them. Attendees own them. No middleman.</p>
+          <div class="work-links">
+            <a href="https://github.com/danieliyahu1/kticket" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </article>
+        <article class="work-item" data-reveal>
+          <div class="work-meta">Kaspa · Token creation</div>
           <h3>Forge</h3>
           <p>Create your own token on Kaspa in minutes. Three fields. One button. Done. Real covenant-bound assets. No code.</p>
-          <div class="card-links">
+          <div class="work-links">
             <a href="https://github.com/danieliyahu1/forge" target="_blank" rel="noopener noreferrer">GitHub</a>
             <a href="https://forge-jbu3.onrender.com/" target="_blank" rel="noopener noreferrer">Live</a>
           </div>
         </article>
-        <article class="card">
-          <div class="card-meta">Kaspa · Event ticketing</div>
-          <h3>Kticket</h3>
-          <p>On-chain event ticketing on Kaspa. Tickets are covenant-bound assets. Organizers deploy them. Attendees hold them. No middleman.</p>
-          <div class="card-links">
-            <a href="https://github.com/danieliyahu1/kticket" target="_blank" rel="noopener noreferrer">GitHub</a>
-          </div>
-        </article>
-        <article class="card">
-          <div class="card-meta">Kaspa · Receipts</div>
+        <article class="work-item" data-reveal>
+          <div class="work-meta">Kaspa · Receipts</div>
           <h3>Kaspa Statement</h3>
-          <p>Any Kaspa transaction. A clean, printable receipt. Simple. Useful.</p>
-          <div class="card-links">
+          <p>Any Kaspa transaction becomes a clean, printable receipt. Simple. Useful.</p>
+          <div class="work-links">
             <a href="https://github.com/danieliyahu1/kaspa-statement" target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
         </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="site-shell">
-      <div class="section-heading">
-        <div>
-          <h2>AI</h2>
-        </div>
-        <p>Assistants that read and answer. No setup.</p>
-      </div>
-      <div class="grid">
-        <article class="card">
-          <div class="card-meta">AI · Chatbot</div>
+        <article class="work-item" data-reveal>
+          <div class="work-meta">AI · Chatbot</div>
           <h3>Keren-AI</h3>
           <p>An AI assistant that answers questions about the Keren-Or scholarship. Fast. Accurate. Always on.</p>
-          <div class="card-links">
+          <div class="work-links">
             <a href="https://github.com/danieliyahu1/keren-ai" target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
         </article>
-        <article class="card">
-          <div class="card-meta">AI · MCP server</div>
+        <article class="work-item" data-reveal>
+          <div class="work-meta">AI · MCP server</div>
           <h3>Kaspa Simple MCP</h3>
           <p>AI assistants read the Kaspa chain directly. Balances. Transactions. Blocks. No node required.</p>
-          <div class="card-links">
+          <div class="work-links">
             <a href="https://github.com/danieliyahu1/kaspa-simple-mcp" target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
         </article>
@@ -119,45 +137,44 @@
   <section class="section">
     <div class="site-shell">
       <div class="section-heading">
-        <div>
-          <h2>Open source</h2>
-        </div>
+        <h2>Open source</h2>
         <p>Contributing to the ecosystems I use every day.</p>
       </div>
-      <div class="grid">
-        <article class="card">
-          <div class="card-meta">Kaspa · Infrastructure</div>
+      <div class="work-list">
+        <article class="work-item" data-reveal>
+          <div class="work-meta">Kaspa · Infrastructure</div>
           <h3>Kaspa REST Server</h3>
           <p>The REST API behind kaspa.org.</p>
-          <div class="card-links">
+          <div class="work-links">
             <a href="https://github.com/kaspa-ng/kaspa-rest-server" target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
         </article>
-        <article class="card">
-          <div class="card-meta">OpenCode · Plugin</div>
+        <article class="work-item" data-reveal>
+          <div class="work-meta">OpenCode · Plugin</div>
           <h3>OpenCode PTY</h3>
           <p>Terminal control for AI agents. Run processes. Send input. Read output.</p>
-          <div class="card-links">
+          <div class="work-links">
             <a href="https://github.com/shekohex/opencode-pty" target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
         </article>
-        <article class="card">
-          <div class="card-meta">OpenCode · Plugin</div>
+        <article class="work-item" data-reveal>
+          <div class="work-meta">OpenCode · Plugin</div>
           <h3>OpenCode Notifier</h3>
           <p>Know when your AI tasks finish. No staring at the screen.</p>
-          <div class="card-links">
+          <div class="work-links">
             <a href="https://github.com/mohak34/opencode-notifier" target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
         </article>
-        <article class="card">
-          <div class="card-meta">OpenCode · Mobile</div>
+        <article class="work-item" data-reveal>
+          <div class="work-meta">OpenCode · Mobile</div>
           <h3>OpenCode Telegram Bot</h3>
           <p>Your AI tools in your pocket. Run and monitor tasks from your phone.</p>
-          <div class="card-links">
+          <div class="work-links">
             <a href="https://github.com/grinev/opencode-telegram-bot" target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
         </article>
       </div>
+      <p class="skills-line">B.Sc. Computer Science — Reichman University · Combat Commander, IDF Paratroopers · Hebrew, English, Amharic</p>
     </div>
   </section>
 </main>
@@ -165,17 +182,18 @@
 <footer class="site-footer">
   <div class="site-shell footer-inner">
     <div>
-      <strong>Daniel</strong>
-      <div class="muted">© <span data-year>2026</span> Daniel</div>
+      <strong class="footer-brand">Daniel Eliyahu</strong>
+      <div class="muted">© <span data-year>2026</span> Daniel Eliyahu</div>
+      <div class="muted">Israel</div>
     </div>
     <nav class="footer-nav">
       <a href="index.html">Home</a>
       <a href="work.html">Work</a>
-      <a href="now.html">Now</a>
-      <a href="journeys.html">Journeys</a>
-      <a href="connect.html">Connect</a>
+      <a href="connect.html">Reach out</a>
     </nav>
     <div class="socials">
+      <a href="mailto:danieliyahu1@gmail.com" rel="me" aria-label="Email"><img src="assets/img/gmail.svg" alt=""></a>
+      <a href="https://www.linkedin.com/in/daniel-eliyahu-543a7017b/" target="_blank" rel="me noopener noreferrer" aria-label="LinkedIn"><img src="assets/img/linkedin.svg" alt=""></a>
       <a href="https://github.com/danieliyahu1" target="_blank" rel="me noopener noreferrer" aria-label="GitHub"><img src="assets/img/github.svg" alt=""></a>
     </div>
   </div>
