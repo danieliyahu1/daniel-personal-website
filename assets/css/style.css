@@ -1015,37 +1015,6 @@ html[dir="rtl"] .case-meta strong {
   margin-top: clamp(56px, 7vw, 88px);
 }
 
-/* ---------- Status ---------- */
-
-.status {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  padding: 4px 9px;
-  border: 1px solid var(--ember);
-  border-radius: 2px;
-  background: var(--ember);
-  color: var(--ember-ink);
-  font-size: 0.62rem;
-  font-weight: 600;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-}
-
-.status::before {
-  content: "";
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: currentColor;
-}
-
-.status-testnet {
-  border-color: var(--line);
-  background: transparent;
-  color: var(--muted);
-}
-
 /* ---------- Principles ---------- */
 
 .principles {
@@ -1537,18 +1506,6 @@ html[dir="rtl"] .case-meta strong {
 
 .app:last-of-type {
   border-bottom: 1px solid var(--line);
-}
-
-.app-meta {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 14px;
-  font-size: 0.66rem;
-  font-weight: 600;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--muted);
 }
 
 .app h2 {
