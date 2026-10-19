@@ -92,6 +92,7 @@
   --ember-ink: #ffffff;
   --ember-soft: #f3e6de;
   --ember-on-dark: #ff8a63;
+  --thread: color-mix(in srgb, var(--ember) 62%, var(--line));
   --contrast-bg: #15130f;
   --contrast-ink: #f5f2ec;
   --contrast-muted: #b7b0a3;
@@ -120,6 +121,7 @@ html[data-theme="dark"] {
   --ember-ink: #17100c;
   --ember-soft: #2a1812;
   --ember-on-dark: #ff6a3d;
+  --thread: color-mix(in srgb, var(--ember) 66%, var(--line));
   --contrast-bg: #f2eee6;
   --contrast-ink: #15130f;
   --contrast-muted: #5b564d;
@@ -380,6 +382,7 @@ html[data-nav-open="true"] .nav-toggle .icon-close {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
   min-height: 48px;
   padding: 13px 24px;
   border-radius: 2px;
@@ -407,6 +410,16 @@ html[data-nav-open="true"] .nav-toggle .icon-close {
   background: transparent;
   border-color: var(--ink);
   color: var(--ink);
+}
+
+.button--ember {
+  background: var(--ember);
+  color: var(--ember-ink);
+}
+
+.button--ember:hover {
+  background: var(--ink);
+  color: var(--paper);
 }
 
 .link {
@@ -796,6 +809,16 @@ html[dir="rtl"] .case-meta strong {
   color: var(--ember-ink);
 }
 
+.section--dark .button.button--ember {
+  background: var(--ember);
+  color: var(--ember-ink);
+}
+
+.section--dark .button.button--ember:hover {
+  background: var(--poster-ink);
+  color: var(--poster-bg);
+}
+
 /* Full-bleed closing */
 .section--closing {
   background: var(--ember);
@@ -998,11 +1021,11 @@ html[dir="rtl"] .case-meta strong {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  padding: 4px 8px;
-  border: 1px solid var(--line);
-  border-color: color-mix(in srgb, var(--ember) 45%, transparent);
+  padding: 4px 9px;
+  border: 1px solid var(--ember);
   border-radius: 2px;
-  color: var(--ember);
+  background: var(--ember);
+  color: var(--ember-ink);
   font-size: 0.62rem;
   font-weight: 600;
   letter-spacing: 0.15em;
@@ -1019,6 +1042,7 @@ html[dir="rtl"] .case-meta strong {
 
 .status-testnet {
   border-color: var(--line);
+  background: transparent;
   color: var(--muted);
 }
 
@@ -1196,20 +1220,20 @@ html[dir="rtl"] .case-meta strong {
   left: 0;
   width: 100%;
   height: 100%;
-  color: var(--line);
+  color: var(--thread);
   pointer-events: none;
 }
 
 .dag-edge {
   fill: none;
-  stroke: var(--line);
-  stroke-width: 1;
+  stroke: var(--thread);
+  stroke-width: 1.35;
   transition: stroke 0.18s ease, stroke-width 0.18s ease;
 }
 
 .dag-edge.is-hot {
   stroke: var(--ember);
-  stroke-width: 1.6;
+  stroke-width: 2;
 }
 
 .dag-edge--wrap {
@@ -1699,6 +1723,7 @@ html[dir="rtl"] .case-meta strong {
 .app-links {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 12px 24px;
   margin-top: 22px;
   font-size: 0.9rem;
