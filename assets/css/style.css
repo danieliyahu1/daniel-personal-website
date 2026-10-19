@@ -1206,7 +1206,7 @@ html[dir="rtl"] .case-meta strong {
   z-index: 1;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: stretch;
   gap: 26px 18px;
   padding: 2px 14px 2px 26px;
   list-style: none;
@@ -1216,7 +1216,7 @@ html[dir="rtl"] .case-meta strong {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   width: 190px;
   min-height: 104px;
   padding: 14px 18px;
@@ -1252,7 +1252,13 @@ html[dir="rtl"] .case-meta strong {
 
 @media (max-width: 780px) {
   .dag-stop {
-    width: 128px;
+    width: calc(50% - 9px);
+  }
+}
+
+@media (max-width: 600px) {
+  .dag-stop {
+    width: 100%;
   }
 }
 
