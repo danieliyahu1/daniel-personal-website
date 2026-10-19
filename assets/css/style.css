@@ -2127,8 +2127,8 @@ html[lang="he"] .case-body p {
 
 html[lang="he"] .brand,
 html[lang="he"] .footer-brand {
-  font-family: "Instrument Serif", Georgia, serif;
-  direction: ltr;
+  font-family: "Frank Ruhl Libre", "Instrument Serif", Georgia, serif;
+  direction: rtl;
   unicode-bidi: isolate;
 }
 
