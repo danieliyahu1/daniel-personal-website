@@ -3,26 +3,60 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nothing here — Daniel Eliyahu</title>
+  <title>Nothing here. — Daniel Eliyahu</title>
   <meta name="robots" content="noindex" />
-  <meta name="theme-color" content="#f7f7f8" media="(prefers-color-scheme: light)" />
-  <meta name="theme-color" content="#101012" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#f5f2ec" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0f0e0c" media="(prefers-color-scheme: dark)" />
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
   <script>(function(){try{var t=localStorage.getItem('dani-theme');if(t!=='light'&&t!=='dark'){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.dataset.theme=t;}catch(e){}})();</script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/style.css?v=20261019e" />
 </head>
 <body>
-  <div class="error-box">
-    <h1>Nothing here.</h1>
-    <p>You probably want the work.</p>
-    <div class="error-actions">
-      <a class="button" href="work.html">See the work</a>
-      <a class="link-arrow" href="index.html">Back home</a>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="brand" href="/">Daniel Eliyahu<span class="dot">.</span></a>
+    <button type="button" class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
+      <svg class="icon-menu" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><svg class="icon-close" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </button>
+    <div class="nav-area" id="site-menu">
+      <nav class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="/#apps">Apps</a></li>
+          <li><a href="/#about">About</a></li>
+          <li><a href="/#skills">Skills</a></li>
+          <li><a href="/#experience">Experience</a></li>
+          <li><a href="/#contact">Say hello</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme"><span data-theme-label>Dark</span></button>
     </div>
   </div>
-  <script src="assets/js/main.js" defer></script>
+</header>
+
+<main id="main" tabindex="-1">
+  <section class="error shell">
+    <p class="eyebrow">404</p>
+    <h1>Nothing here.</h1>
+    <p>No page, no feed, no algorithm. Just a wrong turn.</p>
+    <div class="actions">
+      <a class="button" href="/">Back home</a>
+      <a class="link" href="/#apps">See the apps <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="shell">
+    <div class="footer-bottom footer-solo">
+      <span>© <span data-year>2026</span> Daniel Eliyahu · Israel</span>
+      <span>Built by hand.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js?v=20261019e" defer></script>
 </body>
 </html>
+

@@ -3,194 +3,506 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Daniel Eliyahu — Backend Engineer</title>
-  <meta name="description" content="Daniel Eliyahu — Backend engineer in Israel. Production Java microservices, shipped end to end. On-chain tools, built in the open." />
-  <meta name="theme-color" content="#f7f7f8" media="(prefers-color-scheme: light)" />
-  <meta name="theme-color" content="#101012" media="(prefers-color-scheme: dark)" />
+  <title>Daniel Eliyahu — Software people own.</title>
+  <meta name="description" content="Daniel Eliyahu — backend engineer in Israel. Five apps running, three contributed repos, and systems of record owned end to end." />
+  <meta name="theme-color" content="#f5f2ec" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0f0e0c" media="(prefers-color-scheme: dark)" />
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="canonical" href="https://danieliyahu.com/" />
+
   <meta property="og:type" content="profile" />
-  <meta property="og:title" content="Daniel Eliyahu — Backend Engineer" />
-  <meta property="og:description" content="Daniel Eliyahu — Backend engineer. Production Java microservices. On-chain tools, built in the open." />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Daniel Eliyahu — Backend Engineer" />
+  <meta property="og:site_name" content="Daniel Eliyahu" />
+  <meta property="og:title" content="Daniel Eliyahu — Software people own." />
+  <meta property="og:description" content="Five apps running, three contributed repos, and systems of record owned end to end." />
+  <meta property="og:url" content="https://danieliyahu.com/" />
+  <meta property="og:image" content="https://danieliyahu.com/assets/img/og/home.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Daniel Eliyahu — Software people own." />
+  <meta name="twitter:description" content="Five apps running, three contributed repos, and systems of record owned end to end." />
+  <meta name="twitter:image" content="https://danieliyahu.com/assets/img/og/home.jpg" />
+
   <script>(function(){try{var t=localStorage.getItem('dani-theme');if(t!=='light'&&t!=='dark'){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.dataset.theme=t;}catch(e){}})();</script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="preload" href="assets/fonts/instrumentserif-400.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/instrumentsans-400.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" as="image" href="assets/img/apps/kaskama.jpg" fetchpriority="high" />
+  <link rel="stylesheet" href="assets/css/style.css?v=20261019e" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Daniel Eliyahu",
+    "url": "https://danieliyahu.com/",
+    "jobTitle": "Backend Engineer",
+    "address": { "@type": "PostalAddress", "addressCountry": "IL" },
+    "sameAs": [
+      "https://github.com/danieliyahu1",
+      "https://www.linkedin.com/in/daniel-eliyahu-543a7017b/"
+    ]
+  }
+  </script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <header class="site-header">
-  <a class="skip-link" href="#main">Skip to content</a>
-  <div class="site-shell header-inner">
-    <a class="brand" href="index.html">Daniel Eliyahu</a>
-    <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="site-menu" aria-label="Menu">☰</button>
+  <div class="shell header-inner">
+    <a class="brand" href="#home">Daniel Eliyahu<span class="dot">.</span></a>
+    <button type="button" class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
+      <svg class="icon-menu" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <svg class="icon-close" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </button>
     <div class="nav-area" id="site-menu">
       <nav class="site-nav" aria-label="Primary">
         <ul>
-          <li><a href="index.html" aria-current="page">Home</a></li>
-          <li><a href="work.html">Work</a></li>
-          <li><a href="apps.html">Live apps</a></li>
-          <li><a href="connect.html">Reach out</a></li>
+          <li><a href="#apps">Apps</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Say hello</a></li>
         </ul>
       </nav>
-      <div class="header-tools">
-        <button class="toggle" type="button" data-theme-toggle aria-label="Toggle theme"><span data-theme-label>Dark</span></button>
-      </div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme"><span data-theme-label>Dark</span></button>
     </div>
   </div>
 </header>
 
 <main id="main" tabindex="-1">
-  <section class="hero">
-    <div class="site-shell">
-      <h1 class="hero-name">Daniel Eliyahu</h1>
-      <p class="hero-lede">Engineer. Entrepreneur. Traveler.</p>
-      <div class="hero-actions">
-        <a class="button" href="connect.html">Reach out</a>
-        <a class="link-arrow" href="work.html">See what I build →</a>
+  <section class="hero" id="home">
+    <div class="shell hero-grid">
+      <div>
+        <p class="eyebrow rise">Backend engineer <span class="mark">/</span> Israel</p>
+        <h1 class="rise rise-2">Software people <span class="own">own</span>.</h1>
+        <p class="hero-lede rise rise-3">Systems of record by day. Self-custody tools on Kaspa the rest of the time. I build things that keep working — and keep belonging to the people who use them.</p>
+        <div class="actions hero-actions rise rise-4">
+          <a class="button" href="#apps">See what I've shipped</a>
+          <a class="link" href="#contact">Say hello <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <div class="hero-visual rise rise-3">
+        <figure class="frame">
+          <img src="assets/img/apps/kaskama.jpg" width="1600" height="1000" alt="Kaskama's landing page: Get paid by the people who love your work." fetchpriority="high" decoding="async" />
+          <figcaption><span>Kaskama <span class="live">· Live</span></span><span>kaskama.com</span></figcaption>
+        </figure>
       </div>
     </div>
   </section>
 
-  <section class="section journey">
-    <div class="site-shell">
-      <p class="eyebrow">The story</p>
-      <p class="journey-lead">From Rehovot to production systems of record — with the Paratroopers and university in between.</p>
-      <div class="journey-list">
-        <div class="journey-row" data-reveal>
-          <span class="journey-num" aria-hidden="true">01</span>
-          <div class="journey-body">
-            <h3>Rehovot</h3>
-            <p>Born and raised. Soccer as a kid. Aharai! — a youth leadership program.</p>
+  <section aria-label="At a glance">
+    <div class="shell proof">
+      <div>
+        <strong>5</strong>
+        <span>Apps running</span>
+      </div>
+      <div>
+        <strong>3</strong>
+        <span>Repos contributed</span>
+      </div>
+      <div>
+        <strong>11</strong>
+        <span>Merged PRs</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="apps">
+    <div class="shell">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Apps</p>
+          <h2>Five things, running now.</h2>
+        </div>
+        <p>Each one is running. Each one is built to be kept — not rented.</p>
+      </div>
+
+      <div class="product-grid">
+        <article class="product-card" data-reveal>
+          <figure class="frame">
+            <img src="assets/img/apps/kaskama.jpg" width="1600" height="1000" alt="Kaskama landing page with the headline Get paid by the people who love your work." loading="lazy" decoding="async" />
+          </figure>
+          <p class="app-meta"><span>Creator subscriptions</span><span class="status">Live</span></p>
+          <h3><a href="https://kaskama.com/" target="_blank" rel="noopener noreferrer">Kaskama</a></h3>
+          <p>Publish a photo, video, audio track, or document. Set your price. Keep 99% — the money moves from the buyer to the creator, not through a platform balance. Creators sign in with Kasware; the media stays private.</p>
+          <p class="stack"><span>React</span><span>TypeScript</span><span>Kaspa</span><span>Turso</span></p>
+          <div class="app-links">
+            <a class="link" href="https://kaskama.com/" target="_blank" rel="noopener noreferrer">Open Kaskama <span class="arrow" aria-hidden="true">↗</span></a>
+            <a class="link" href="https://github.com/danieliyahu1/kaskama" target="_blank" rel="noopener noreferrer">Code</a>
+          </div>
+        </article>
+
+        <article class="product-card" data-reveal>
+          <figure class="frame">
+            <img src="assets/img/apps/kasodds.jpg" width="1600" height="1000" alt="KasOdds lobby with options to play someone new or play with a friend." loading="lazy" decoding="async" />
+          </figure>
+          <p class="app-meta"><span>On-chain game</span><span class="status">Live</span></p>
+          <h3><a href="https://kasodds.com/" target="_blank" rel="noopener noreferrer">KasOdds</a></h3>
+          <p>Pick 1 or 2 in secret. An even total wins for Even, an odd total for Odd. Funds lock only after both players are matched, and a covenant enforces the result — the server never learns your number first.</p>
+          <p class="stack"><span>TypeScript</span><span>Kaspa</span><span>Covenants</span></p>
+          <div class="app-links">
+            <a class="link" href="https://kasodds.com/" target="_blank" rel="noopener noreferrer">Open KasOdds <span class="arrow" aria-hidden="true">↗</span></a>
+            <a class="link" href="https://github.com/danieliyahu1/kas-odds" target="_blank" rel="noopener noreferrer">Code</a>
+          </div>
+        </article>
+
+        <article class="product-card" data-reveal>
+          <figure class="frame">
+            <img src="assets/img/apps/onepercent.jpg" width="1600" height="1000" alt="The Top One Percent Club join screen with its percent logo." loading="lazy" decoding="async" />
+          </figure>
+          <p class="app-meta"><span>Party trivia</span><span class="status">Live</span></p>
+          <h3><a href="https://onepercent.danieliyahu.com/" target="_blank" rel="noopener noreferrer">The Top One Percent Club</a></h3>
+          <p>A timed trivia game about percentages. The questions get harder as fewer people can answer them — from 90% down to 1%. A room plays together in real time, and the scoreboard doesn't lie.</p>
+          <p class="stack"><span>React</span><span>Express</span><span>Socket.IO</span></p>
+          <div class="app-links">
+            <a class="link" href="https://onepercent.danieliyahu.com/" target="_blank" rel="noopener noreferrer">Open the game <span class="arrow" aria-hidden="true">↗</span></a>
+            <a class="link" href="https://github.com/danieliyahu1/top-one-percent-club" target="_blank" rel="noopener noreferrer">Code</a>
+          </div>
+        </article>
+
+        <article class="product-card" data-reveal>
+          <figure class="frame">
+            <img src="assets/img/apps/kticket.jpg" width="1600" height="1000" alt="Kticket events page in its empty state, with a Create an event button." loading="lazy" decoding="async" />
+          </figure>
+          <p class="app-meta"><span>Event ticketing</span><span class="status status-testnet">Testnet</span></p>
+          <h3><a href="https://kticket.danieliyahu.com/" target="_blank" rel="noopener noreferrer">Kticket</a></h3>
+          <p>Tickets people actually own. Covenant-bound, self-custody, no middleman. Organizers deploy the rules; attendees hold the ticket. The API is stateless and re-verifies every event from the chain.</p>
+          <p class="stack"><span>React</span><span>TypeScript</span><span>Fastify</span><span>Kaspa</span></p>
+          <div class="app-links">
+            <a class="link" href="https://kticket.danieliyahu.com/" target="_blank" rel="noopener noreferrer">Open Kticket <span class="arrow" aria-hidden="true">↗</span></a>
+            <a class="link" href="https://github.com/danieliyahu1/kticket" target="_blank" rel="noopener noreferrer">Code</a>
+          </div>
+        </article>
+
+        <article class="product-card product-featured" data-reveal>
+          <figure class="frame">
+            <img src="assets/img/apps/daftari.jpg" width="1600" height="1000" alt="Daftari connect screen asking the visitor to connect a wallet." loading="lazy" decoding="async" />
+          </figure>
+          <div>
+            <p class="app-meta"><span>Savings groups</span><span class="status status-testnet">Testnet</span></p>
+            <h3><a href="https://daftari.danieliyahu.com/" target="_blank" rel="noopener noreferrer">Daftari</a></h3>
+            <p>Chamas that keep their own books. A chama is a real Kaspa wallet; members pay in on-chain, and the chain is the ledger. Sign in with a Kaspa signature — no password, no custodian.</p>
+            <p class="stack"><span>TypeScript</span><span>Express</span><span>Turso</span><span>Kaspa</span></p>
+            <div class="app-links">
+              <a class="link" href="https://daftari.danieliyahu.com/" target="_blank" rel="noopener noreferrer">Open Daftari <span class="arrow" aria-hidden="true">↗</span></a>
+              <a class="link" href="#daftari">Case study <span class="arrow" aria-hidden="true">→</span></a>
+              <a class="link" href="https://github.com/danieliyahu1/daftari" target="_blank" rel="noopener noreferrer">Code</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-rule" id="daftari">
+    <div class="shell">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Case study</p>
+          <h2>The book that can't be cooked.</h2>
+        </div>
+        <p>Daftari — savings groups where the chama is a wallet and the chain is the ledger.</p>
+      </div>
+
+      <figure class="diagram" data-reveal>
+        <div class="flow">
+          <div class="flow-step">
+            <span class="flow-num">01</span>
+            <p class="flow-title">Members pay in</p>
+            <p>Each contribution is a real Kaspa transaction to the group's address.</p>
+          </div>
+          <div class="flow-arrow" aria-hidden="true">→</div>
+          <div class="flow-step">
+            <span class="flow-num">02</span>
+            <p class="flow-title">The chama wallet</p>
+            <p>The group is one wallet. Nobody holds it on the group's behalf.</p>
+          </div>
+          <div class="flow-arrow" aria-hidden="true">→</div>
+          <div class="flow-step">
+            <span class="flow-num">03</span>
+            <p class="flow-title">The chain keeps the book</p>
+            <p>Every payment is the record. The server can read it; it can't rewrite it.</p>
           </div>
         </div>
-        <div class="journey-row" data-reveal>
-          <span class="journey-num" aria-hidden="true">02</span>
-          <div class="journey-body">
-            <h3>Akko</h3>
-            <p>Gal Pre-Army Academy — a year of leadership before the army.</p>
-          </div>
+        <figcaption>A chama is a wallet, not a database row.</figcaption>
+      </figure>
+
+      <div class="case-body">
+        <h3>The problem</h3>
+        <p>Rotating savings groups — chamas — run on trust and a book. Members pay in on a schedule; each round, one member takes the pot. It works because everyone knows each other, and because one person keeps the record. That record is usually paper, a spreadsheet, or a WhatsApp thread. It is also the thing people argue about.</p>
+
+        <h3>The design</h3>
+        <p>A chama in Daftari is a real Kaspa wallet, not a database row. Members are wallets that pay into it. Every contribution and withdrawal is a real transaction: built server-side, signed in the browser with the Kastle wallet, and broadcast to testnet-10.</p>
+        <p>Membership is self-enforcing. A wallet can join only after it has actually transacted with the chama's wallet. Social state — names, memberships, sign-in challenges — lives in a hosted Turso database. The money never does.</p>
+
+        <blockquote class="case-quote">If the record can be edited, it isn't a record.</blockquote>
+
+        <h3>What it took</h3>
+        <p>The hard part wasn't the transaction. It was making an on-chain group feel like a group: joining, being recognized, seeing who paid and who didn't, without turning the page into a block explorer. Mainnet readiness is less about code and more about edges — wallet onboarding for people who have never held a key, dispute flows that don't require me, and the moment a chama grows past the people who already trust each other.</p>
+        <p>That's the honest test. Not whether the transaction confirms — whether the group still works when it isn't a group of friends.</p>
+
+        <div class="case-foot">
+          <a class="button" href="https://daftari.danieliyahu.com/" target="_blank" rel="noopener noreferrer">Open Daftari</a>
+          <a class="link" href="https://github.com/danieliyahu1/daftari" target="_blank" rel="noopener noreferrer">Read the code <span class="arrow" aria-hidden="true">↗</span></a>
+          <a class="link" href="#apps">All apps <span class="arrow" aria-hidden="true">→</span></a>
         </div>
-        <div class="journey-row" data-reveal>
-          <span class="journey-num" aria-hidden="true">03</span>
-          <div class="journey-body">
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-rule" id="about">
+    <div class="shell">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">About</p>
+          <h2>Three rules I don't bend.</h2>
+        </div>
+        <p>The parts that show up after launch are the ones I care about.</p>
+      </div>
+
+      <div class="principles">
+        <div class="principle" data-reveal>
+          <span class="num">01</span>
+          <h3>Own it end to end.</h3>
+          <p>Design, delivery, and the 3 a.m. page. If it runs in production, it's mine to understand and fix.</p>
+        </div>
+        <div class="principle" data-reveal>
+          <span class="num">02</span>
+          <h3>Test it like it's staying.</h3>
+          <p>The test suite is part of the product, not a box to tick. Reliability is a design decision, not a cleanup task.</p>
+        </div>
+        <div class="principle" data-reveal>
+          <span class="num">03</span>
+          <h3>Make it belong to the user.</h3>
+          <p>No custodian, no lock-in, no quiet edits. The person using the thing should hold the thing.</p>
+        </div>
+      </div>
+
+      <div class="path-block">
+        <p class="eyebrow" data-reveal>The path</p>
+        <p class="path-lead" data-reveal>Rehovot <span class="sep">→</span> Akko <span class="sep">→</span> the Paratroopers <span class="sep">→</span> Reichman <span class="sep">→</span> Cognyte.</p>
+        <div class="path-steps">
+          <div data-reveal>
             <h3>The Paratroopers</h3>
-            <p>Drafted into the Paratroopers. Served as a combat commander.</p>
+            <p>Combat commander. Leading people under pressure, long before I wrote production code.</p>
           </div>
-        </div>
-        <div class="journey-row" data-reveal>
-          <span class="journey-num" aria-hidden="true">04</span>
-          <div class="journey-body">
+          <div data-reveal>
             <h3>Reichman</h3>
-            <p>B.Sc. Computer Science.</p>
+            <p>B.Sc. Computer Science. The fundamentals, properly — not just the framework of the month.</p>
           </div>
-        </div>
-        <div class="journey-row" data-reveal>
-          <span class="journey-num" aria-hidden="true">05</span>
-          <div class="journey-body">
+          <div data-reveal>
             <h3>Cognyte</h3>
-            <p>Java microservices that became the system of record — owned end to end, 80% test coverage, zero critical incidents.</p>
+            <p>Backend engineer. Three microservices that became the system of record, owned end to end.</p>
           </div>
+        </div>
+        <p class="fine">Off the clock: running, bachata, yoga. Cities, nature, springs. Two accelerators along the way.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote">
+    <div class="shell">
+      <p data-reveal>My own corner of the internet. No feed, no algorithm, no one else's rules.</p>
+      <cite data-reveal>Why this site exists</cite>
+    </div>
+  </section>
+
+  <section class="section section-rule" id="skills">
+    <div class="shell">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Skills</p>
+          <h2>What I reach for.</h2>
+        </div>
+        <p>The stack behind the work, from the database to the deploy.</p>
+      </div>
+      <div class="skills">
+        <div>
+          <h3>Languages &amp; frameworks</h3>
+          <p>Java · Spring Boot<br />TypeScript · Node.js · React<br />Python</p>
+        </div>
+        <div>
+          <h3>Data &amp; messaging</h3>
+          <p>PostgreSQL · Elasticsearch<br />Kafka<br />Turso</p>
+        </div>
+        <div>
+          <h3>Infrastructure</h3>
+          <p>Docker · Kubernetes · Helm<br />CI/CD<br />MCP servers</p>
+        </div>
+      </div>
+      <p class="fine">B.Sc. Computer Science, Reichman University · Combat Commander, IDF Paratroopers · Hebrew, English, Amharic</p>
+    </div>
+  </section>
+
+  <section class="section section-rule" id="experience">
+    <div class="shell">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Experience</p>
+          <h2>Where I've shipped.</h2>
+        </div>
+        <p>Roles where the work had to survive contact with production.</p>
+      </div>
+
+      <div class="roles">
+        <article class="role" data-reveal>
+          <p class="role-date">2024–2026</p>
+          <div>
+            <h3>Backend Engineer</h3>
+            <p class="org">Cognyte · Israel</p>
+            <p>Shipped three production microservices that became the system of record for critical business data — design, delivery, and production support, owned end to end.</p>
+            <p>Replaced a legacy media pipeline with convert-on-demand. Files are processed only when someone asks to play them. Terabytes saved.</p>
+            <p>80% test coverage across them. Zero critical incidents.</p>
+            <p class="stack"><span>Java</span><span>Spring Boot</span><span>Kafka</span><span>PostgreSQL</span><span>Docker</span><span>Kubernetes</span></p>
+          </div>
+        </article>
+
+        <article class="role" data-reveal>
+          <p class="role-date">2023</p>
+          <div>
+            <h3>Full-Stack Developer Intern</h3>
+            <p class="org">Jazwares LLC</p>
+            <p>Built the company's B2C website on Node.js and React — a new direct-to-customer channel and smoother cross-functional workflows.</p>
+            <p class="stack"><span>Node.js</span><span>React</span><span>B2C</span></p>
+          </div>
+        </article>
+
+        <article class="role" data-reveal>
+          <p class="role-date">2018–2019</p>
+          <div>
+            <h3>Coding Instructor &amp; Marketing Referent</h3>
+            <p class="org">Google &amp; Reichman University Tech School</p>
+            <p>Taught Python to thirty students. Ran the Facebook campaigns that filled the program.</p>
+            <p class="stack"><span>Python</span><span>Teaching</span><span>Marketing</span></p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-rule" id="open-source">
+    <div class="shell">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Open source</p>
+          <h2>Contributing to the ecosystems I use.</h2>
+        </div>
+        <p>Merged fixes in tools that run every day.</p>
+      </div>
+      <div class="list">
+        <div class="list-row" data-reveal>
+          <h3>OCI K3s Starter</h3>
+          <p>Seven merged PRs: opt-in Terraform apply in CI, k9s tunnel access, vault secrets, stale kubeconfig handling, and docs for the sharp edges.</p>
+          <a class="link" href="https://github.com/adirbd/oci-k3s-starter/pulls?q=is%3Apr+author%3Adanieliyahu1+is%3Amerged" target="_blank" rel="noopener noreferrer">7 merged PRs <span class="arrow" aria-hidden="true">↗</span></a>
+        </div>
+        <div class="list-row" data-reveal>
+          <h3>OpenCode Notifier</h3>
+          <p>Merged a Windows focus-detection fix using class and process name matching.</p>
+          <a class="link" href="https://github.com/mohak34/opencode-notifier/pull/92" target="_blank" rel="noopener noreferrer">PR #92 <span class="arrow" aria-hidden="true">↗</span></a>
+        </div>
+        <div class="list-row" data-reveal>
+          <h3>OpenCode Telegram Bot</h3>
+          <p>Merged three Windows process fixes: direct spawning, PATH resolution, and recycled-PID detection.</p>
+          <a class="link" href="https://github.com/grinev/opencode-telegram-bot/pulls?q=is%3Apr+author%3Adanieliyahu1+is%3Amerged" target="_blank" rel="noopener noreferrer">3 merged PRs <span class="arrow" aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+
+      <div class="section-head sub-head">
+        <div>
+          <p class="eyebrow">Built in the open</p>
+          <h2>Tools I made for myself.</h2>
+        </div>
+        <p>The useful ones tend to start as a personal annoyance.</p>
+      </div>
+      <div class="list">
+        <div class="list-row" data-reveal>
+          <h3>Keren-AI</h3>
+          <p>An AI assistant that answers questions about the Keren-Or scholarship.</p>
+          <a class="link" href="https://github.com/danieliyahu1/keren-ai" target="_blank" rel="noopener noreferrer">GitHub <span class="arrow" aria-hidden="true">↗</span></a>
+        </div>
+        <div class="list-row" data-reveal>
+          <h3>Kaspa Simple MCP</h3>
+          <p>AI assistants read the Kaspa chain directly. Balances, transactions, blocks. No node required.</p>
+          <a class="link" href="https://github.com/danieliyahu1/kaspa-simple-mcp" target="_blank" rel="noopener noreferrer">GitHub <span class="arrow" aria-hidden="true">↗</span></a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section beyond">
-    <div class="site-shell">
-      <p class="eyebrow">Beyond the work</p>
-      <div class="beyond-list">
-        <div class="beyond-row" data-reveal>
-          <span class="beyond-label">Entrepreneurship</span>
-          <p class="beyond-text">I've been through two accelerators — Aharai! and UpStart.</p>
-        </div>
-        <div class="beyond-row" data-reveal>
-          <span class="beyond-label">Traveling</span>
-          <p class="beyond-text">Cities, nature, springs. I travel to find them.</p>
-        </div>
-        <div class="beyond-row" data-reveal>
-          <span class="beyond-label">Cultures</span>
-          <p class="beyond-text">Meeting people from different cultures widens my horizon.</p>
-        </div>
-        <div class="beyond-row" data-reveal>
-          <span class="beyond-label">Hobbies</span>
-          <p class="beyond-text">Running · bachata · yoga</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <section class="section section-rule" id="contact">
+    <div class="shell">
+      <p class="eyebrow">Say hello</p>
+      <h2 class="contact-title">Let's build something worth owning.</h2>
+      <p class="contact-lede">If you're building something that needs to be owned — or you just want to talk shop — say hello.</p>
 
-  <section class="section" data-reveal>
-    <div class="site-shell">
-      <div class="section-heading">
-        <h2>The work that says it best</h2>
-        <p>Three tools. Real people use them.</p>
-      </div>
-      <div class="feature-list">
-        <a class="feature-item" href="https://daftari.danieliyahu.com" target="_blank" rel="noopener noreferrer">
-          <div>
-            <span class="feature-meta">Kaspa · Live</span>
-            <h3>Daftari</h3>
-            <p>On-chain savings groups on Kaspa. Members pool money into a shared wallet, with every contribution recorded on the chain.</p>
+      <div class="connect-grid">
+        <div data-reveal>
+          <p class="connect-ask">No form, no tracking, no newsletter. Just a person on the other end.</p>
+          <div class="reach">
+            <a href="mailto:danieliyahu1@gmail.com">
+              <span>Email</span>
+              <span class="arrow" aria-hidden="true">→</span>
+            </a>
+            <a href="https://www.linkedin.com/in/daniel-eliyahu-543a7017b/" target="_blank" rel="me noopener noreferrer">
+              <span>LinkedIn</span>
+              <span class="arrow" aria-hidden="true">→</span>
+            </a>
+            <a href="https://github.com/danieliyahu1" target="_blank" rel="me noopener noreferrer">
+              <span>GitHub</span>
+              <span class="arrow" aria-hidden="true">→</span>
+            </a>
           </div>
-          <span class="arrow" aria-hidden="true">→</span>
-        </a>
-        <a class="feature-item" href="https://kticket.danieliyahu.com" target="_blank" rel="noopener noreferrer">
-          <div>
-            <span class="feature-meta">Kaspa · Live</span>
-            <h3>Kticket</h3>
-            <p>On-chain event ticketing. Tickets people actually own — covenant-bound, self-custody. No middleman.</p>
-          </div>
-          <span class="arrow" aria-hidden="true">→</span>
-        </a>
-        <a class="feature-item" href="https://onepercent.danieliyahu.com" target="_blank" rel="noopener noreferrer">
-          <div>
-            <span class="feature-meta">Game · Live</span>
-            <h3>The Top One Percent Club</h3>
-            <p>A timed trivia game inspired by The 1% Club: solve logic, word, and number puzzles ranked by the percentage of people who get them right, from 90% down to 1%.</p>
-          </div>
-          <span class="arrow" aria-hidden="true">→</span>
-        </a>
-      </div>
-      <p class="section-foot"><a class="link-arrow" href="work.html">All the work →</a></p>
-      <div class="path" aria-label="The path">
-        <span>Web apps</span><i>→</i><span>Full stack</span><i>→</i><span>Microservices</span><i>→</i><span>Blockchain + AI</span>
-      </div>
-    </div>
-  </section>
+          <p class="connect-note">danieliyahu1@gmail.com · I read everything, and I reply to most of it.</p>
+        </div>
 
-  <section class="invite" data-reveal>
-    <div class="site-shell">
-      <h2>Reach out</h2>
-      <p>If you're building something that needs honesty — or someone who ships — say hello.</p>
-      <a class="button" href="connect.html">Get in touch</a>
+        <div class="connect-side" data-reveal>
+          <h2>What I'm up for</h2>
+          <ul>
+            <li><span>Building together</span><strong>Products</strong></li>
+            <li><span>Talking shop</span><strong>Systems</strong></li>
+            <li><span>Comparing notes</span><strong>Kaspa</strong></li>
+          </ul>
+          <p class="connect-note">Based in Israel · UTC+2, UTC+3 in summer.</p>
+        </div>
+      </div>
     </div>
   </section>
 </main>
 
 <footer class="site-footer">
-  <div class="site-shell footer-inner">
-    <div>
-      <strong class="footer-brand">Daniel Eliyahu</strong>
-      <div class="muted">© <span data-year>2026</span> Daniel Eliyahu</div>
-      <div class="muted">Israel</div>
+  <div class="shell">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-brand">Daniel Eliyahu<span class="dot">.</span></p>
+        <p class="footer-note">Backend engineer in Israel. Building systems that hold, and tools people own.</p>
+      </div>
+      <div>
+        <h2>Pages</h2>
+        <div class="footer-links">
+          <a href="#apps">Apps</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#daftari">Daftari case study</a>
+          <a href="#contact">Say hello</a>
+        </div>
+      </div>
+      <div>
+        <h2>Elsewhere</h2>
+        <div class="footer-links">
+          <a href="mailto:danieliyahu1@gmail.com">Email</a>
+          <a href="https://www.linkedin.com/in/daniel-eliyahu-543a7017b/" target="_blank" rel="me noopener noreferrer">LinkedIn</a>
+          <a href="https://github.com/danieliyahu1" target="_blank" rel="me noopener noreferrer">GitHub</a>
+        </div>
+      </div>
     </div>
-    <nav class="footer-nav">
-      <a href="index.html">Home</a>
-      <a href="work.html">Work</a>
-      <a href="apps.html">Live apps</a>
-      <a href="connect.html">Reach out</a>
-    </nav>
-    <div class="socials">
-      <a href="mailto:danieliyahu1@gmail.com" rel="me" aria-label="Email"><img src="assets/img/gmail.svg" alt=""></a>
-      <a href="https://www.linkedin.com/in/daniel-eliyahu-543a7017b/" target="_blank" rel="me noopener noreferrer" aria-label="LinkedIn"><img src="assets/img/linkedin.svg" alt=""></a>
-      <a href="https://github.com/danieliyahu1" target="_blank" rel="me noopener noreferrer" aria-label="GitHub"><img src="assets/img/github.svg" alt=""></a>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> Daniel Eliyahu · Israel</span>
+      <span><a class="footer-top" href="#home">Back to top ↑</a> · Built by hand.</span>
     </div>
   </div>
 </footer>
 
-<script src="assets/js/main.js" defer></script>
+<script src="assets/js/main.js?v=20261019e" defer></script>
 </body>
 </html>
+
