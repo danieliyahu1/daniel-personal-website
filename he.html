@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Daniel Eliyahu — תוכנה ששייכת לאנשים.</title>
-  <meta name="description" content="דניאל אליהו — מהנדס Backend בישראל. חמישה אפים פעילים, שלושה ריפוזיטוריז שתרמתי להם, ומערכות רשומות בבעלות מלאה." />
+  <title>דניאל אליהו — אני יוצא לחפש את מה שעוד לא מכיר.</title>
+  <meta name="description" content="דניאל אליהו — אני בונה תוכנה ששייכת לאנשים שמשתמשים בה. כשאני לא עושה את זה, אני בטיול איפשהו, או רוקד בכאטה." />
   <meta name="theme-color" content="#f5f2ec" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#0f0e0c" media="(prefers-color-scheme: dark)" />
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
@@ -17,23 +17,22 @@
   <meta property="og:site_name" content="Daniel Eliyahu" />
   <meta property="og:locale" content="he_IL" />
   <meta property="og:locale:alternate" content="en_US" />
-  <meta property="og:title" content="Daniel Eliyahu — תוכנה ששייכת לאנשים." />
-  <meta property="og:description" content="חמישה אפים פעילים, שלושה ריפוזיטוריז שתרמתי להם, ומערכות רשומות בבעלות מלאה." />
+  <meta property="og:title" content="דניאל אליהו — אני יוצא לחפש את מה שעוד לא מכיר." />
+  <meta property="og:description" content="דניאל אליהו — אני בונה תוכנה ששייכת לאנשים שמשתמשים בה. כשאני לא עושה את זה, אני בטיול איפשהו, או רוקד בכאטה." />
   <meta property="og:url" content="https://danieliyahu.com/he.html" />
   <meta property="og:image" content="https://danieliyahu.com/assets/img/og/home-he.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Daniel Eliyahu — תוכנה ששייכת לאנשים." />
-  <meta name="twitter:description" content="חמישה אפים פעילים, שלושה ריפוזיטוריז שתרמתי להם, ומערכות רשומות בבעלות מלאה." />
+  <meta name="twitter:title" content="דניאל אליהו — אני יוצא לחפש את מה שעוד לא מכיר." />
+  <meta name="twitter:description" content="דניאל אליהו — אני בונה תוכנה ששייכת לאנשים שמשתמשים בה. כשאני לא עושה את זה, אני בטיול איפשהו, או רוקד בכאטה." />
   <meta name="twitter:image" content="https://danieliyahu.com/assets/img/og/home-he.jpg" />
 
   <script>(function(){try{var t=localStorage.getItem('dani-theme');if(t!=='light'&&t!=='dark'){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.dataset.theme=t;}catch(e){}})();</script>
   <link rel="preload" href="assets/fonts/frankruhllibre-hebrew.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="assets/fonts/heebo-hebrew.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="assets/fonts/instrumentserif-400.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="preload" as="image" href="assets/img/apps/kaskama.jpg" fetchpriority="high" />
-  <link rel="stylesheet" href="assets/css/style.css?v=20261019f" />
+  <link rel="stylesheet" href="assets/css/style.css?v=20261020c" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -41,7 +40,6 @@
     "name": "Daniel Eliyahu",
     "alternateName": "דניאל אליהו",
     "url": "https://danieliyahu.com/he.html",
-    "jobTitle": "מהנדס Backend",
     "inLanguage": "he",
     "address": { "@type": "PostalAddress", "addressCountry": "IL" },
     "sameAs": [
@@ -64,10 +62,9 @@
     <div class="nav-area" id="site-menu">
       <nav class="site-nav" aria-label="ניווט ראשי">
         <ul>
+          <li><a href="#about">מי אני</a></li>
+          <li><a href="#stations">תחנות</a></li>
           <li><a href="#apps">אפליקציות</a></li>
-          <li><a href="#about">אודות</a></li>
-          <li><a href="#skills">כישורים</a></li>
-          <li><a href="#experience">ניסיון</a></li>
           <li><a href="#contact">אמרו שלום</a></li>
         </ul>
       </nav>
@@ -81,38 +78,114 @@
 
 <main id="main" tabindex="-1">
   <section class="hero" id="home">
-    <div class="shell hero-grid">
+    <div class="shell hero-grid hero-grid-solo">
       <div>
-        <p class="eyebrow rise">מהנדס Backend <span class="mark">/</span> ישראל</p>
-        <h1 class="rise rise-2">תוכנה ששייכת <span class="own">לאנשים</span>.</h1>
-        <p class="hero-lede rise rise-3">מערכות רשומות ביום. כלי משמורת עצמית על Kaspa בשאר הזמן. אני בונה דברים שממשיכים לעבוד — ושנשארים שייכים למי שמשתמש בהם.</p>
+        <p class="eyebrow rise">דניאל אליהו <span class="mark">/</span> מהנדס Backend, ישראל</p>
+        <h1 class="rise rise-2">אני יוצא לחפש את מה שעוד <span class="accent">לא</span> מכיר.</h1>
+        <p class="hero-lede rise rise-3">אני בונה תוכנה ששייכת לאנשים שמשתמשים בה. כשאני לא עושה את זה, אני בטיול איפשהו, או רוקד בכאטה.</p>
         <div class="actions hero-actions rise rise-4">
-          <a class="button" href="#apps">ראו מה בניתי</a>
-          <a class="link" href="#contact">אמרו שלום <span class="arrow" aria-hidden="true">←</span></a>
+          <a class="button" href="#about">מי אני</a>
+          <a class="link" href="#apps">מה בניתי <span class="arrow" aria-hidden="true">←</span></a>
         </div>
-      </div>
-      <div class="hero-visual rise rise-3">
-        <figure class="frame">
-          <img src="assets/img/apps/kaskama.jpg" width="1600" height="1000" alt="עמוד הבית של Kaskama: Get paid by the people who love your work." fetchpriority="high" decoding="async" />
-          <figcaption><span>Kaskama <span class="live">· פעיל</span></span><span>kaskama.com</span></figcaption>
-        </figure>
       </div>
     </div>
   </section>
 
-  <section aria-label="במבט אחד">
-    <div class="shell proof">
-      <div>
-        <strong>5</strong>
-        <span>אפליקציות פעילות</span>
+  <section class="section" id="about">
+    <div class="shell">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">מי אני</p>
+          <h2>נולדתי ברחובות. שמח יותר במדבר.</h2>
+        </div>
+        <p>לא קורות חיים. הגרסה הקצרה של איך הגעתי לכאן, ומה אכפת לי.</p>
       </div>
-      <div>
-        <strong>3</strong>
-        <span>ריפוזיטוריז שתרמתי להם</span>
+
+      <div class="about-body about-body--solo">
+        <div class="about-prose">
+          <p>נולדתי וגדלתי ברחובות. אחרי התיכון עשיתי מכינה בעכו — שנה להבין מה באמת אני רוצה — ואז צנחנים, שם הפכתי למפקד לוחם. אחר כך הגיעה אוניברסיטת רייכמן, מדעי המחשב, ואחריה Cognyte, בניית מערכות Backend שעבודה של אנשים אחרים הייתה תלויה בהן.</p>
+          <p>הציר הזמן הוא לא החלק המעניין. מה שספר לך קודם זה שאני סקרן כמעט מכל דבר, והסקרנות הזו נוטה להוציא אותי מהמפה. מדבר במקום חוף ים, שביל שלא מופיע במפה, מקום בלי שלט בכניסה. אני מטייל הרבה, וככל שמתרחקים יותר מהחניה — טוב יותר.</p>
+          <p>מחוץ לשביל זה בכאטה ויוגה, ומה שאני קורא באותו חודש על AI ובלוקצ'יין. אני בונה לעצמי דברים — חמישה אפים, כלי משמורת עצמית על Kaspa — כי לעשות משהו מעניין יותר מלחכות שמישהו אחר יעשה.</p>
+          <p>מתחת לכל זה עומד רעיון אחד: ללמד אדם לדוג. לא לתת למישהו מוצר שהוא צריך רשות כדי להשתמש בו — לתת לו את הדבר עצמו. זו הסיבה שהכסף באפים שלי עובר בין אנשים ולא דרך יתרה של פלטפורמה, שמתחברים עם מפתח שנמצא אצלך, ושזה עמוד שנכתב ביד ולא פרופיל בפיד של מישהו אחר.</p>
+          <p>ואני לא מחכה לשלמות. התקדמות מנצחת שלמות — לשחרר משהו אמיתי ואז לשפר אותו זה איך כל מה שכאן באמת נבנה.</p>
+          <p class="about-note">בינתיים אני קורא על AI ובלוקצ'יין, ומחפש את השביל הבא שאף אחד עוד לא עליו.</p>
+        </div>
       </div>
-      <div>
-        <strong>11</strong>
-        <span>PRs מוזגו</span>
+    </div>
+  </section>
+
+  <section class="quote">
+    <div class="shell">
+      <p data-reveal>הפינה שלי באינטרנט. בלי פיד, בלי אלגוריתם, בלי החוקים של מישהו אחר.</p>
+      <cite data-reveal>למה האתר הזה קיים</cite>
+    </div>
+  </section>
+
+  <section class="section section-rule" id="stations">
+    <div class="shell">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">תחנות בחיים</p>
+          <h2>איך הגעתי לכאן.</h2>
+        </div>
+      </div>
+
+      <div class="dag-wrap">
+        <svg class="dag-edges" aria-hidden="true" focusable="false"></svg>
+        <ol class="dag">
+        <li class="dag-stop" data-reveal>
+          <h3>רחובות</h3>
+          <p>נולדתי וגדלתי.</p>
+        </li>
+        <li class="dag-stop" data-reveal>
+          <h3>אחריי</h3>
+          <p>משתתף.</p>
+        </li>
+        <li class="dag-stop" data-reveal>
+          <h3>מכינה בעכו</h3>
+          <p>שנה להבין מה באמת אני רוצה.</p>
+        </li>
+        <li class="dag-stop" data-reveal>
+          <h3>צנחנים</h3>
+          <p>מפקד לוחם.</p>
+        </li>
+        <li class="dag-stop" data-reveal>
+          <h3>מרכז מעשה</h3>
+          <p>מדריך.</p>
+        </li>
+        <li class="dag-stop" data-reveal>
+          <h3>אקסלרטור אחריי</h3>
+          <p>תוכנית יזמות.</p>
+        </li>
+        <li class="dag-stop dag-stop--fork" data-reveal>
+          <div class="dag-main">
+            <h3>אוניברסיטת רייכמן</h3>
+            <p>מדעי המחשב.</p>
+          </div>
+          <div class="dag-branches">
+            <div class="dag-branch">
+              <h3>WeCode</h3>
+              <p>התחלתי כמתנדב באוניברסיטה, ואחר כך עבדתי שם.</p>
+            </div>
+            <div class="dag-branch">
+              <h3>Pulse</h3>
+              <p>הובלתי את תוכנית היזמות בבריאות דיגיטלית.</p>
+            </div>
+            <div class="dag-branch">
+              <h3>UpStart</h3>
+              <p>נבחרתי לתוכנית היזמות.</p>
+            </div>
+          </div>
+        </li>
+        <li class="dag-stop" data-reveal>
+          <h3>Jazwares</h3>
+          <p>העבודה הראשונה בתעשייה — אתר הצרכנים של החברה, שנבנה עם Node ו-React.</p>
+        </li>
+        <li class="dag-stop" data-reveal>
+          <h3>Cognyte</h3>
+          <p>Backend — מערכות שעבודה של אנשים אחרים הייתה תלויה בהן.</p>
+        </li>
+        </ol>
       </div>
     </div>
   </section>
@@ -124,7 +197,7 @@
           <p class="eyebrow">אפליקציות</p>
           <h2>חמישה דברים, רצים עכשיו.</h2>
         </div>
-        <p>כל אחד מהם רץ. כל אחד מהם נבנה כדי להיות שלכם — לא כדי לשכור.</p>
+        <p>כל אחד מהם רץ ונבנה כדי להישאר — לא כדי להיות מושכר.</p>
       </div>
 
       <div class="product-grid">
@@ -158,7 +231,7 @@
 
         <article class="product-card" data-reveal>
           <figure class="frame">
-            <img src="assets/img/apps/onepercent.jpg" width="1600" height="1000" alt="מסך ההצטרפות של האחוזון העליון עם לוגו האחוז." loading="lazy" decoding="async" />
+            <img src="assets/img/apps/onepercent.jpg?v=20261020b" width="1600" height="1000" alt="שאלה מתוך האחוזון העליון: חידת תמונה בעברית על שלט אסם ובו שנה חסרה." loading="lazy" decoding="async" />
           </figure>
           <p class="app-meta"><span>טריוויה למסיבה</span><span class="status">פעיל</span></p>
           <h3><a href="https://onepercent.danieliyahu.com/" target="_blank" rel="noopener noreferrer">האחוזון העליון</a></h3>
@@ -243,7 +316,7 @@
 
         <h3>התכנון</h3>
         <p>צ'אמה ב-Daftari היא ארנק Kaspa אמיתי, לא שורה במסד נתונים. החברים הם ארנקים שמשלמים לתוכו. כל הפקדה ומשיכה היא עסקה אמיתית: נבנית בצד השרת, נחתמת בדפדפן עם ארנק Kastle, ומשודרת ל-testnet-10.</p>
-        <p>החברות נאכפת מעצמה. ארנק יכול להצטרף רק אחרי שהוא ביצע עסקה עם ארנק הצ'אמה. מצב חברתי — שמות, חברויות, אתגרי התחברות — חי ב-Turso. הכסף אף פעם לא.</p>
+        <p>החברות נאכפת מעצמה. ארנק יכול להצטרף רק אחרי שהוא ביצע עסקה עם ארנק הצ'אמה. מצב חברתי — שמות, חברויות, אתגרי התחברות — חי במסד נתונים Turso מתארח. הכסף אף פעם לא.</p>
 
         <blockquote class="case-quote">אם אפשר לערוך את הרשומה, היא לא רשומה.</blockquote>
 
@@ -256,136 +329,6 @@
           <a class="link" href="https://github.com/danieliyahu1/daftari" target="_blank" rel="noopener noreferrer">קראו את הקוד <span class="arrow" aria-hidden="true">↗</span></a>
           <a class="link" href="#apps">כל האפליקציות <span class="arrow" aria-hidden="true">←</span></a>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-rule" id="about">
-    <div class="shell">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">אודות</p>
-          <h2>שלושה כללים שאין עליהם פשרות.</h2>
-        </div>
-        <p>החלקים שמופיעים אחרי ההשקה הם אלה שאכפת לי מהם.</p>
-      </div>
-
-      <div class="principles">
-        <div class="principle" data-reveal>
-          <span class="num">01</span>
-          <h3>בעלות מקצה לקצה.</h3>
-          <p>תכנון, מסירה, וקריאת ה-3 לפנות בוקר. אם זה רץ בפרודקשן, זה שלי להבין ולתקן.</p>
-        </div>
-        <div class="principle" data-reveal>
-          <span class="num">02</span>
-          <h3>לבדוק כאילו זה נשאר.</h3>
-          <p>חבילת הבדיקות היא חלק מהמוצר, לא תיבת סימון. אמינות היא החלטת תכנון, לא משימת ניקוי.</p>
-        </div>
-        <div class="principle" data-reveal>
-          <span class="num">03</span>
-          <h3>לגרום לזה להיות שייך למשתמש.</h3>
-          <p>בלי נאמן, בלי נעילה, בלי עריכות שקטות. מי שמשתמש בדבר צריך להחזיק בדבר.</p>
-        </div>
-      </div>
-
-      <div class="path-block">
-        <p class="eyebrow" data-reveal>הדרך</p>
-        <p class="path-lead" data-reveal>רחובות <span class="sep">←</span> עכו <span class="sep">←</span> הצנחנים <span class="sep">←</span> רייכמן <span class="sep">←</span> Cognyte.</p>
-        <div class="path-steps">
-          <div data-reveal>
-            <h3>הצנחנים</h3>
-            <p>מפקד לוחם. הובלת אנשים תחת לחץ, הרבה לפני שכתבתי קוד לפרודקשן.</p>
-          </div>
-          <div data-reveal>
-            <h3>רייכמן</h3>
-            <p>תואר ראשון במדעי המחשב. היסודות, כמו שצריך — לא רק הפריימוורק של החודש.</p>
-          </div>
-          <div data-reveal>
-            <h3>Cognyte</h3>
-            <p>מהנדס Backend. שלושה מיקרו-שירותים שהפכו למערכת הרשומה, בבעלות מקצה לקצה.</p>
-          </div>
-        </div>
-        <p class="fine">מחוץ לשעות: ריצה, בצ'אטה, יוגה. ערים, טבע, מעיינות. שתי תוכניות האצה בדרך.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="quote">
-    <div class="shell">
-      <p data-reveal>הפינה שלי באינטרנט. בלי פיד, בלי אלגוריתם, בלי החוקים של מישהו אחר.</p>
-      <cite data-reveal>למה האתר הזה קיים</cite>
-    </div>
-  </section>
-
-  <section class="section section-rule" id="skills">
-    <div class="shell">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">כישורים</p>
-          <h2>הסטאק שלי.</h2>
-        </div>
-        <p>הסטאק שמאחורי העבודה, מהמסד ועד הדיפלוי.</p>
-      </div>
-      <div class="skills">
-        <div>
-          <h3>שפות ופריימוורקים</h3>
-          <p>Java · Spring Boot<br />TypeScript · Node.js · React<br />Python</p>
-        </div>
-        <div>
-          <h3>נתונים והודעות</h3>
-          <p>PostgreSQL · Elasticsearch<br />Kafka<br />Turso</p>
-        </div>
-        <div>
-          <h3>תשתיות</h3>
-          <p>Docker · Kubernetes · Helm<br />CI/CD<br />MCP servers</p>
-        </div>
-      </div>
-      <p class="fine">תואר ראשון במדעי המחשב, אוניברסיטת רייכמן · מפקד לוחם, צנחנים · עברית, אנגלית, אמהרית</p>
-    </div>
-  </section>
-
-  <section class="section section-rule" id="experience">
-    <div class="shell">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">ניסיון</p>
-          <h2>איפה שיחררתי לפרודקשן.</h2>
-        </div>
-        <p>תפקידים שבהם העבודה הייתה צריכה לשרוד מפגש עם פרודקשן.</p>
-      </div>
-
-      <div class="roles">
-        <article class="role" data-reveal>
-          <p class="role-date">2024–2026</p>
-          <div>
-            <h3>מהנדס Backend</h3>
-            <p class="org">Cognyte · ישראל</p>
-            <p>שיחררתי שלושה מיקרו-שירותים לפרודקשן שהפכו למערכת הרשומה לנתונים עסקיים קריטיים — תכנון, מסירה ותמיכה בפרודקשן, בבעלות מקצה לקצה.</p>
-            <p>החלפתי צינור מדיה מדור קודם ב-convert-on-demand. קבצים מעובדים רק כשמישהו מבקש לנגן אותם. טרה-בייטים נחסכו.</p>
-            <p>80% כיסוי בדיקות. אפס תקלות קריטיות.</p>
-            <p class="stack"><span>Java</span><span>Spring Boot</span><span>Kafka</span><span>PostgreSQL</span><span>Docker</span><span>Kubernetes</span></p>
-          </div>
-        </article>
-
-        <article class="role" data-reveal>
-          <p class="role-date">2023</p>
-          <div>
-            <h3>מתמחה בפיתוח Full-Stack</h3>
-            <p class="org">Jazwares LLC</p>
-            <p>בניתי את אתר ה-B2C של החברה ב-Node.js ו-React — ערוץ חדש ישירות ללקוח ותהליכים חלקים יותר בין צוותים.</p>
-            <p class="stack"><span>Node.js</span><span>React</span><span>B2C</span></p>
-          </div>
-        </article>
-
-        <article class="role" data-reveal>
-          <p class="role-date">2018–2019</p>
-          <div>
-            <h3>מדריך תכנות ואחראי שיווק</h3>
-            <p class="org">Google ובית הספר לטכנולוגיה של אוניברסיטת רייכמן</p>
-            <p>לימדתי Python לשלושים תלמידים. הפעלתי את קמפיין הפייסבוק שמילא את התוכנית.</p>
-            <p class="stack"><span>Python</span><span>Teaching</span><span>Marketing</span></p>
-          </div>
-        </article>
       </div>
     </div>
   </section>
@@ -427,7 +370,7 @@
       <div class="list">
         <div class="list-row" data-reveal>
           <h3>Keren-AI</h3>
-          <p>עוזר AI שעונה על שאלות על מלגת קרן-אור.</p>
+          <p>עוזר AI למלגת קרן-אור שלי באוניברסיטת רייכמן.</p>
           <a class="link" href="https://github.com/danieliyahu1/keren-ai" target="_blank" rel="noopener noreferrer">GitHub <span class="arrow" aria-hidden="true">↗</span></a>
         </div>
         <div class="list-row" data-reveal>
@@ -462,7 +405,6 @@
               <span class="arrow" aria-hidden="true">←</span>
             </a>
           </div>
-          <p class="connect-note">danieliyahu1@gmail.com · אני קורא הכל, ועונה לרוב.</p>
         </div>
 
         <div class="connect-side" data-reveal>
@@ -475,38 +417,15 @@
 
 <footer class="site-footer">
   <div class="shell">
-    <div class="footer-grid">
-      <div>
-        <p class="footer-brand" lang="en">Daniel Eliyahu<span class="dot">.</span></p>
-        <p class="footer-note">מהנדס Backend בישראל. בונה מערכות שמחזיקות, וכלים ששייכים לאנשים.</p>
-      </div>
-      <div>
-        <h2>עמודים</h2>
-        <div class="footer-links">
-          <a href="#apps">אפליקציות</a>
-          <a href="#about">אודות</a>
-          <a href="#skills">כישורים</a>
-          <a href="#experience">ניסיון</a>
-          <a href="#daftari">מקרה הבוחן של Daftari</a>
-          <a href="#contact">אמרו שלום</a>
-        </div>
-      </div>
-      <div>
-        <h2>במקומות אחרים</h2>
-        <div class="footer-links">
-          <a href="mailto:danieliyahu1@gmail.com">אימייל</a>
-          <a href="https://www.linkedin.com/in/daniel-eliyahu-543a7017b/" target="_blank" rel="me noopener noreferrer">LinkedIn</a>
-          <a href="https://github.com/danieliyahu1" target="_blank" rel="me noopener noreferrer">GitHub</a>
-        </div>
-      </div>
-    </div>
+    <p class="footer-brand" lang="en">Daniel Eliyahu<span class="dot">.</span></p>
+    <p class="footer-note">אני יוצא לחפש את מה שעוד לא מכיר.</p>
     <div class="footer-bottom">
-      <span>© <span data-year>2026</span> Daniel Eliyahu · ישראל</span>
+      <span>© <span data-year>2026</span> Daniel Eliyahu</span>
       <span><a class="footer-top" href="#home">חזרה למעלה ↑</a> · נבנה ביד.</span>
     </div>
   </div>
 </footer>
 
-<script src="assets/js/main.js?v=20261019f" defer></script>
+<script src="assets/js/main.js?v=20261020d" defer></script>
 </body>
 </html>

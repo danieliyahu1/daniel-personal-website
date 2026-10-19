@@ -138,13 +138,14 @@
         return el.classList.contains("dag-stop");
       });
       var paths = [];
+      var rtl = window.getComputedStyle(dag).direction === "rtl";
 
       for (var i = 1; i < items.length; i++) {
         var from = items[i - 1].getBoundingClientRect();
         var to = items[i].getBoundingClientRect();
-        var ax = from.right - wrapRect.left;
+        var ax = (rtl ? from.left : from.right) - wrapRect.left;
         var ay = from.top - wrapRect.top + from.height / 2;
-        var bx = to.left - wrapRect.left;
+        var bx = (rtl ? to.right : to.left) - wrapRect.left;
         var by = to.top - wrapRect.top + to.height / 2;
 
         if (Math.abs(ay - by) < 2) {
@@ -152,11 +153,28 @@
         } else {
           var gapMid = from.bottom + (to.top - from.bottom) * 0.62 - wrapRect.top;
           var r = 8;
-          var xOut = ax + 8;
-          var xIn = bx - 14;
+          var d;
 
-          paths.push({
-            d:
+          if (rtl) {
+            var xOutR = ax - 8;
+            var xInR = bx + 14;
+
+            d =
+              "M" + ax + " " + ay +
+              "H" + (xOutR + r) +
+              "Q" + xOutR + " " + ay + " " + xOutR + " " + (ay + r) +
+              "V" + (gapMid - r) +
+              "Q" + xOutR + " " + gapMid + " " + (xOutR + r) + " " + gapMid +
+              "H" + (xInR - r) +
+              "Q" + xInR + " " + gapMid + " " + xInR + " " + (gapMid + r) +
+              "V" + (by - r) +
+              "Q" + xInR + " " + by + " " + (xInR - r) + " " + by +
+              "H" + bx;
+          } else {
+            var xOut = ax + 8;
+            var xIn = bx - 14;
+
+            d =
               "M" + ax + " " + ay +
               "H" + (xOut - r) +
               "Q" + xOut + " " + ay + " " + xOut + " " + (ay + r) +
@@ -166,10 +184,10 @@
               "Q" + xIn + " " + gapMid + " " + xIn + " " + (gapMid + r) +
               "V" + (by - r) +
               "Q" + xIn + " " + by + " " + (xIn + r) + " " + by +
-              "H" + bx,
-            wrap: true,
-            from: i - 1
-          });
+              "H" + bx;
+          }
+
+          paths.push({ d: d, wrap: true, from: i - 1 });
         }
       }
 

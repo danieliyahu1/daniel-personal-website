@@ -2075,6 +2075,7 @@ html[lang="he"] .hero h1,
 html[lang="he"] .section-head h2,
 html[lang="he"] .case-body h3,
 html[lang="he"] .product-card h3,
+html[lang="he"] .dag h3,
 html[lang="he"] .quote p,
 html[lang="he"] .case-quote,
 html[lang="he"] .path-lead,
@@ -2158,6 +2159,28 @@ html[dir="rtl"] .diagram figcaption {
   text-align: right;
 }
 
+/* the life-stations DAG runs right to left */
+html[dir="rtl"] .dag {
+  padding: 2px 26px 2px 14px;
+}
+
+html[dir="rtl"] .dag-branches {
+  padding-left: 0;
+  padding-right: 26px;
+  border-left: 0;
+  border-right: 1px solid var(--line);
+}
+
+html[dir="rtl"] .dag-branches::before {
+  left: auto;
+  right: -27px;
+}
+
+html[dir="rtl"] .dag-branch::after {
+  left: auto;
+  right: -26px;
+}
+
 html[dir="rtl"] .skip-link {
   left: auto;
   right: -9999px;
@@ -2177,6 +2200,20 @@ html[dir="rtl"] .reach a:hover .arrow {
   html[dir="rtl"] .principle + .principle {
     padding-right: 0;
     border-right: 0;
+  }
+}
+
+@media (max-width: 780px) {
+  html[dir="rtl"] .dag-branches {
+    padding-right: 16px;
+  }
+
+  html[dir="rtl"] .dag-branches::before {
+    right: -17px;
+  }
+
+  html[dir="rtl"] .dag-branch::after {
+    right: -16px;
   }
 }
 
