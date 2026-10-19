@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Daniel Eliyahu — I go looking for what I don't know yet.</title>
-  <meta name="description" content="Daniel Eliyahu — I build software that belongs to the people using it. When I'm not doing that, I'm out hiking somewhere, or dancing bachata." />
+  <title>Daniel Eliyahu — Software engineer, Israel</title>
   <meta name="theme-color" content="#f5f2ec" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#0f0e0c" media="(prefers-color-scheme: dark)" />
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
@@ -17,22 +16,19 @@
   <meta property="og:site_name" content="Daniel Eliyahu" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:locale:alternate" content="he_IL" />
-  <meta property="og:title" content="Daniel Eliyahu — I go looking for what I don't know yet." />
-  <meta property="og:description" content="Daniel Eliyahu — I build software that belongs to the people using it. When I'm not doing that, I'm out hiking somewhere, or dancing bachata." />
+  <meta property="og:title" content="Daniel Eliyahu — Software engineer, Israel" />
   <meta property="og:url" content="https://danieliyahu.com/" />
   <meta property="og:image" content="https://danieliyahu.com/assets/img/og/home-v2.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Daniel Eliyahu — I go looking for what I don't know yet." />
-  <meta name="twitter:description" content="Daniel Eliyahu — I build software that belongs to the people using it. When I'm not doing that, I'm out hiking somewhere, or dancing bachata." />
+  <meta name="twitter:title" content="Daniel Eliyahu — Software engineer, Israel" />
   <meta name="twitter:image" content="https://danieliyahu.com/assets/img/og/home-v2.jpg" />
 
   <script>(function(){try{var t=localStorage.getItem('dani-theme');if(t!=='light'&&t!=='dark'){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.dataset.theme=t;}catch(e){}})();</script>
-  <link rel="preload" href="assets/fonts/heebo-hebrew.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="assets/fonts/instrumentserif-400.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="assets/fonts/instrumentsans-400.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="assets/css/style.css?v=20261020d" />
+  <link rel="stylesheet" href="assets/css/style.css?v=20261020x" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -52,7 +48,7 @@
 
 <header class="site-header">
   <div class="shell header-inner">
-    <a class="brand" href="#home">Daniel Eliyahu<span class="dot">.</span></a>
+    <a class="brand" href="#home">Daniel Eliyahu</a>
     <button type="button" class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
       <svg class="icon-menu" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
       <svg class="icon-close" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
@@ -60,9 +56,9 @@
     <div class="nav-area" id="site-menu">
       <nav class="site-nav" aria-label="Primary">
         <ul>
-          <li><a href="#about">Who I am</a></li>
+          <li><a href="#about">About</a></li>
           <li><a href="#stations">Stations</a></li>
-          <li><a href="#apps">Apps</a></li>
+          <li><a href="#apps">Work</a></li>
           <li><a href="#contact">Say hello</a></li>
         </ul>
       </nav>
@@ -75,49 +71,50 @@
 </header>
 
 <main id="main" tabindex="-1">
-  <section class="hero" id="home">
+  <section class="hero hero--poster" id="home">
+    <svg class="hero-contours" viewBox="0 0 1440 900" fill="none" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+      <path d="M-120 160C120 80 340 260 620 180S1100 60 1560 200" stroke="currentColor" stroke-width="1"/>
+      <path d="M-120 240C130 150 350 330 630 250S1110 130 1560 270" stroke="currentColor" stroke-width="1"/>
+      <path d="M-120 320C140 220 360 400 640 320S1120 200 1560 340" stroke="currentColor" stroke-width="1"/>
+      <path d="M-120 400C150 290 370 470 650 390S1130 270 1560 410" stroke="currentColor" stroke-width="1"/>
+      <path d="M-120 520C160 400 380 580 660 500S1140 380 1560 520" stroke="currentColor" stroke-width="1"/>
+      <path d="M-120 620C170 500 390 680 670 600S1150 480 1560 620" stroke="currentColor" stroke-width="1"/>
+      <path d="M-120 720C180 600 400 780 680 700S1160 580 1560 720" stroke="currentColor" stroke-width="1"/>
+    </svg>
     <div class="shell hero-grid hero-grid-solo">
       <div>
-        <p class="eyebrow rise">Daniel Eliyahu <span class="mark">/</span> Backend engineer, Israel</p>
-        <h1 class="rise rise-2">I go looking for what I <span class="accent">don't</span> know yet.</h1>
-        <p class="hero-lede rise rise-3">I build software that belongs to the people using it. When I'm not doing that, I'm out hiking somewhere, or dancing bachata.</p>
-        <div class="actions hero-actions rise rise-4">
-          <a class="button" href="#about">Who I am</a>
-          <a class="link" href="#apps">What I've built <span class="arrow" aria-hidden="true">→</span></a>
-        </div>
-      </div>
-      <!-- Portrait slot: when the photo exists, add <div class="hero-visual">…</div> here
-           and drop the hero-grid-solo class to return to two columns. -->
-    </div>
-  </section>
-
-  <section class="section" id="about">
-    <div class="shell">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">Who I am</p>
-          <h2>Born in Rehovot. Happier in the desert.</h2>
-        </div>
-        <p>Not a CV. The short version of how I got here, and what I care about.</p>
-      </div>
-
-      <div class="about-body about-body--solo">
-        <div class="about-prose">
-          <p>I was born and raised in Rehovot. After high school I did a mechina in Akko — a year to work out what I actually wanted — then the Paratroopers, where I became a combat commander. Reichman University came next, computer science, and then Cognyte, building backend systems that other people's work depended on.</p>
-          <p>The timeline isn't the interesting part. What I'd tell you first is that I'm curious about almost everything, and curiosity tends to take me off the map. A desert over a beach, a trail that isn't on the map, a place with no sign at the entrance. I hike a lot, and the further from the parking lot the better.</p>
-          <p>Off the trail it's bachata and yoga, and whatever I'm reading about AI and blockchain that month. I build my own things — five apps, self-custody tools on Kaspa — because making something is more interesting than waiting for someone else to.</p>
-          <p>Underneath all of it is one idea: teach a person to fish. Don't hand someone a product they need permission to use — give them the thing itself. That's why the money in my apps moves between people instead of through a platform balance, why you sign in with a key you hold, and why this is a hand-written page instead of a profile on someone else's feed.</p>
-          <p>And I don't wait for perfect. Progress beats perfection — shipping something real and then making it better is how everything here actually got built.</p>
-          <p class="about-note">Right now I'm reading about AI and blockchain, and looking for the next trail nobody's on.</p>
+        <h1 class="rise rise-2">Daniel Eliyahu</h1>
+        <p class="hero-role rise rise-3">Software engineer by profession, entrepreneur by nature</p>
+        <p class="hero-tagline rise rise-4">I get excited by the <span class="accent">unknown</span></p>
+        <div class="actions hero-actions rise rise-5">
+          <a class="button" href="#apps">See the work</a>
+          <a class="link" href="#contact">Say hello <span class="arrow" aria-hidden="true">→</span></a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="quote">
+  <section class="section" id="about" aria-label="About">
     <div class="shell">
-      <p data-reveal>My own corner of the internet. No feed, no algorithm, no one else's rules.</p>
-      <cite data-reveal>Why this site exists</cite>
+      <h2 class="visually-hidden">About</h2>
+
+      <div class="about-index">
+        <article class="about-tile" data-reveal>
+          <h3 class="about-tile-title">The work</h3>
+          <p class="about-tile-text">Software engineer. I've shipped three production Java/Spring Boot services used as the system of record for critical business data, owning design, delivery, and production support end to end.</p>
+        </article>
+
+        <article class="about-tile about-tile--warm" data-reveal>
+          <h3 class="about-tile-title">My own projects</h3>
+          <p class="about-tile-text">Apps, tools, and experiments of my own — blockchain, AI, and whatever the question calls for.</p>
+          <a class="link about-tile-link about-tile-link--light" href="#apps">See the work <span class="arrow" aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="about-tile about-tile--dark" data-reveal>
+          <h3 class="about-tile-title">Off the clock</h3>
+          <p class="about-tile-text">Hiking, bachata, and yoga. The further from the parking lot, the better.</p>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -128,6 +125,7 @@
           <p class="eyebrow">Life stations</p>
           <h2>How I got here.</h2>
         </div>
+        <p>Rehovot, the Paratroopers, Reichman, Cognyte — and now building my own apps.</p>
       </div>
 
       <div class="dag-wrap">
@@ -143,7 +141,7 @@
         </li>
         <li class="dag-stop" data-reveal>
           <h3>Mechina in Akko</h3>
-          <p>A year to work out what I actually wanted.</p>
+          <p>A year to figure out what I wanted.</p>
         </li>
         <li class="dag-stop" data-reveal>
           <h3>Paratroopers</h3>
@@ -164,50 +162,49 @@
           </div>
           <div class="dag-branches">
             <div class="dag-branch">
-              <h3>WeCode</h3>
-              <p>Started as a university volunteer, then worked there.</p>
+              <h3>Google & Reichman Tech School</h3>
+              <p>Teacher assistant.</p>
             </div>
             <div class="dag-branch">
               <h3>Pulse</h3>
-              <p>Led the digital-health entrepreneurship program.</p>
+              <p>Led the digital-health program.</p>
             </div>
             <div class="dag-branch">
               <h3>UpStart</h3>
-              <p>Selected for the entrepreneurial program.</p>
+              <p>Entrepreneurial program.</p>
             </div>
           </div>
         </li>
         <li class="dag-stop" data-reveal>
           <h3>Jazwares</h3>
-          <p>First industry job — the company's B2C site, on Node and React.</p>
+          <p>First industry job. Node, React.</p>
         </li>
         <li class="dag-stop" data-reveal>
           <h3>Cognyte</h3>
-          <p>Back end — systems other people's work depended on.</p>
+          <p>Backend Engineer.</p>
         </li>
         </ol>
       </div>
     </div>
   </section>
 
-  <section class="section" id="apps">
+  <section class="section section-rule" id="apps">
     <div class="shell">
       <div class="section-head">
         <div>
-          <p class="eyebrow">Apps</p>
+          <p class="eyebrow">Work</p>
           <h2>Five things, running now.</h2>
         </div>
-        <p>Each one is running and built to be kept — not rented.</p>
       </div>
 
       <div class="product-grid">
         <article class="product-card" data-reveal>
           <figure class="frame">
-            <img src="assets/img/apps/kaskama.jpg" width="1600" height="1000" alt="Kaskama landing page with the headline Get paid by the people who love your work." loading="lazy" decoding="async" />
+            <img src="assets/img/apps/kaskama.jpg" width="1600" height="1000" alt="Kaskama landing page with the headline Get paid by the people who love your work." fetchpriority="high" decoding="async" />
           </figure>
           <p class="app-meta"><span>Creator subscriptions</span><span class="status">Live</span></p>
           <h3><a href="https://kaskama.com/" target="_blank" rel="noopener noreferrer">Kaskama</a></h3>
-          <p>Publish a photo, video, audio track, or document. Set your price. Keep 99% — the money moves from the buyer to the creator, not through a platform balance. Creators sign in with Kasware; the media stays private.</p>
+          <p>Paid content. Keep 99% — no platform balance.</p>
           <p class="stack"><span>React</span><span>TypeScript</span><span>Kaspa</span><span>Turso</span></p>
           <div class="app-links">
             <a class="link" href="https://kaskama.com/" target="_blank" rel="noopener noreferrer">Open Kaskama <span class="arrow" aria-hidden="true">↗</span></a>
@@ -221,7 +218,7 @@
           </figure>
           <p class="app-meta"><span>On-chain game</span><span class="status">Live</span></p>
           <h3><a href="https://kasodds.com/" target="_blank" rel="noopener noreferrer">KasOdds</a></h3>
-          <p>Pick 1 or 2 in secret. An even total wins for Even, an odd total for Odd. Funds lock only after both players are matched, and a covenant enforces the result — the server never learns your number first.</p>
+          <p>Pick 1 or 2. A covenant settles the pot.</p>
           <p class="stack"><span>TypeScript</span><span>Kaspa</span><span>Covenants</span></p>
           <div class="app-links">
             <a class="link" href="https://kasodds.com/" target="_blank" rel="noopener noreferrer">Open KasOdds <span class="arrow" aria-hidden="true">↗</span></a>
@@ -235,7 +232,7 @@
           </figure>
           <p class="app-meta"><span>Party trivia</span><span class="status">Live</span></p>
           <h3><a href="https://onepercent.danieliyahu.com/" target="_blank" rel="noopener noreferrer">The Top One Percent Club</a></h3>
-          <p>A timed trivia game about percentages. The questions get harder as fewer people can answer them — from 90% down to 1%. A room plays together in real time, and the scoreboard doesn't lie.</p>
+          <p>Live trivia, from 90% down to 1%.</p>
           <p class="stack"><span>React</span><span>Express</span><span>Socket.IO</span></p>
           <div class="app-links">
             <a class="link" href="https://onepercent.danieliyahu.com/" target="_blank" rel="noopener noreferrer">Open the game <span class="arrow" aria-hidden="true">↗</span></a>
@@ -249,7 +246,7 @@
           </figure>
           <p class="app-meta"><span>Event ticketing</span><span class="status status-testnet">Testnet</span></p>
           <h3><a href="https://kticket.danieliyahu.com/" target="_blank" rel="noopener noreferrer">Kticket</a></h3>
-          <p>Tickets people actually own. Covenant-bound, self-custody, no middleman. Organizers deploy the rules; attendees hold the ticket. The API is stateless and re-verifies every event from the chain.</p>
+          <p>Tickets you own — not tickets you rent.</p>
           <p class="stack"><span>React</span><span>TypeScript</span><span>Fastify</span><span>Kaspa</span></p>
           <div class="app-links">
             <a class="link" href="https://kticket.danieliyahu.com/" target="_blank" rel="noopener noreferrer">Open Kticket <span class="arrow" aria-hidden="true">↗</span></a>
@@ -264,11 +261,11 @@
           <div>
             <p class="app-meta"><span>Savings groups</span><span class="status status-testnet">Testnet</span></p>
             <h3><a href="https://daftari.danieliyahu.com/" target="_blank" rel="noopener noreferrer">Daftari</a></h3>
-            <p>Chamas that keep their own books. A chama is a real Kaspa wallet; members pay in on-chain, and the chain is the ledger. Sign in with a Kaspa signature — no password, no custodian.</p>
+            <p>Savings groups with the book on-chain.</p>
             <p class="stack"><span>TypeScript</span><span>Express</span><span>Turso</span><span>Kaspa</span></p>
             <div class="app-links">
               <a class="link" href="https://daftari.danieliyahu.com/" target="_blank" rel="noopener noreferrer">Open Daftari <span class="arrow" aria-hidden="true">↗</span></a>
-              <a class="link" href="#daftari">How it went <span class="arrow" aria-hidden="true">→</span></a>
+              <a class="link" href="daftari.html">How it went <span class="arrow" aria-hidden="true">→</span></a>
               <a class="link" href="https://github.com/danieliyahu1/daftari" target="_blank" rel="noopener noreferrer">Code</a>
             </div>
           </div>
@@ -277,14 +274,14 @@
     </div>
   </section>
 
-  <section class="section section-rule" id="daftari">
+  <section class="section section-rule section--dark" id="daftari">
     <div class="shell">
       <div class="section-head">
         <div>
           <p class="eyebrow">Startup notes</p>
           <h2>The book that can't be cooked.</h2>
         </div>
-        <p>Daftari was my attempt to build a startup around savings groups in East Africa. I built the MVP, did the research, and stopped. The problem was real; my solution wasn't native enough.</p>
+        <p>A savings group that runs on trust and a paper book. I put the book on-chain, built the MVP, and stopped.</p>
       </div>
 
       <figure class="diagram" data-reveal>
@@ -292,55 +289,27 @@
           <div class="flow-step">
             <span class="flow-num">01</span>
             <p class="flow-title">Members pay in</p>
-            <p>Each contribution is a real Kaspa transaction to the group's address.</p>
+            <p>Each contribution is a transaction.</p>
           </div>
           <div class="flow-arrow" aria-hidden="true">→</div>
           <div class="flow-step">
             <span class="flow-num">02</span>
             <p class="flow-title">The chama wallet</p>
-            <p>The group is one wallet. Nobody holds it on the group's behalf.</p>
+            <p>One wallet, held by no one.</p>
           </div>
           <div class="flow-arrow" aria-hidden="true">→</div>
           <div class="flow-step">
             <span class="flow-num">03</span>
             <p class="flow-title">The chain keeps the book</p>
-            <p>Every payment is the record. The server can read it; it can't rewrite it.</p>
+            <p>Readable, not rewritable.</p>
           </div>
         </div>
         <figcaption>A chama is a wallet, not a database row.</figcaption>
       </figure>
 
-      <div class="case-body">
-        <h3>Where it started</h3>
-        <p>At a mini hackathon run by <a href="https://www.nuraglobal.org/" target="_blank" rel="noopener noreferrer">Nura Global</a>, the conversation turned to payments in Africa. Someone from Kenya described the chama: a rotating savings group where members pay in on a schedule and one member takes the pot each round. I read about it afterwards, talked to friends who know the African market, and decided it was worth researching.</p>
-
-        <h3>The problem</h3>
-        <p>Rotating savings groups — chamas — run on trust and a book. Members pay in on a schedule; each round, one member takes the pot. It works because everyone knows each other, and because one person keeps the record. That record is usually paper, a spreadsheet, or a WhatsApp thread. It is also the thing people argue about.</p>
-
-        <h3>The design</h3>
-        <p>A chama in Daftari is a real Kaspa wallet, not a database row. Members are wallets that pay into it. Every contribution and withdrawal is a real transaction: built server-side, signed in the browser with the Kastle wallet, and broadcast to testnet-10.</p>
-        <p>Membership is self-enforcing. A wallet can join only after it has actually transacted with the chama's wallet. Social state — names, memberships, sign-in challenges — lives in a hosted Turso database. The money never does.</p>
-
-        <blockquote class="case-quote">If the record can be edited, it isn't a record.</blockquote>
-
-        <h3>The process</h3>
-        <p>The research and the build ran together. While the MVP was taking shape, I spoke with people from Kenya and Sudan on LinkedIn. They validated the problem. The record-keeping and the trust were real issues, not something I had imagined from a hackathon room. The prototype was how I tested whether I understood them.</p>
-
-        <h3>What I couldn't solve</h3>
-        <ul>
-          <li><strong>Privacy.</strong> The bet was that a record no one can edit is a record you can trust. The problem is that it's also a record everyone can read. A chama's book is shared among its members, not published to the world, and on a public chain every transaction is visible to anyone who knows the wallet. I don't have a good answer for that.</li>
-          <li><strong>The edges.</strong> Wallet onboarding for people who have never held a key, dispute flows that don't require me, and the moment a chama grows past the people who already trust each other.</li>
-        </ul>
-
-        <h3>Why I stopped</h3>
-        <p>The bigger problem was adoption. A chama is a group of people who already trust each other, and most would rather keep the system they know than move their money to an app built by someone outside their world. I'm not part of that market, and getting a group to try a new chama isn't a technical problem. Trust doesn't move because the code is better.</p>
-        <p>The trust was already there — in the group, and in the system they know. I wasn't part of it. That's why I stopped.</p>
-
-        <div class="case-foot">
-          <a class="button" href="https://daftari.danieliyahu.com/" target="_blank" rel="noopener noreferrer">Open Daftari</a>
-          <a class="link" href="https://github.com/danieliyahu1/daftari" target="_blank" rel="noopener noreferrer">Read the code <span class="arrow" aria-hidden="true">↗</span></a>
-          <a class="link" href="#apps">All apps <span class="arrow" aria-hidden="true">→</span></a>
-        </div>
+      <div class="case-foot">
+        <a class="link" href="daftari.html">Read the case study <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="link" href="https://daftari.danieliyahu.com/" target="_blank" rel="noopener noreferrer">Open Daftari <span class="arrow" aria-hidden="true">↗</span></a>
       </div>
     </div>
   </section>
@@ -352,8 +321,8 @@
           <p class="eyebrow">Open source</p>
           <h2>Contributing to the ecosystems I use.</h2>
         </div>
-        <p>Merged fixes in tools that run every day.</p>
       </div>
+
       <div class="list">
         <div class="list-row" data-reveal>
           <h3>OCI K3s Starter</h3>
@@ -362,8 +331,8 @@
         </div>
         <div class="list-row" data-reveal>
           <h3>OpenCode Notifier</h3>
-          <p>Merged a Windows focus-detection fix using class and process name matching.</p>
-          <a class="link" href="https://github.com/mohak34/opencode-notifier/pull/92" target="_blank" rel="noopener noreferrer">PR #92 <span class="arrow" aria-hidden="true">↗</span></a>
+          <p>Three merged Windows fixes, including focus detection.</p>
+          <a class="link" href="https://github.com/mohak34/opencode-notifier/pulls?q=is%3Apr+author%3Adanieliyahu1+is%3Amerged" target="_blank" rel="noopener noreferrer">3 merged PRs <span class="arrow" aria-hidden="true">↗</span></a>
         </div>
         <div class="list-row" data-reveal>
           <h3>OpenCode Telegram Bot</h3>
@@ -371,57 +340,27 @@
           <a class="link" href="https://github.com/grinev/opencode-telegram-bot/pulls?q=is%3Apr+author%3Adanieliyahu1+is%3Amerged" target="_blank" rel="noopener noreferrer">3 merged PRs <span class="arrow" aria-hidden="true">↗</span></a>
         </div>
       </div>
-
-      <div class="section-head sub-head">
-        <div>
-          <p class="eyebrow">Built in the open</p>
-          <h2>Tools I made for myself.</h2>
-        </div>
-        <p>The useful ones tend to start as a personal annoyance.</p>
-      </div>
-      <div class="list">
-        <div class="list-row" data-reveal>
-          <h3>Keren-AI</h3>
-          <p>An AI assistant for my scholarship, Keren Or, at Reichman University.</p>
-          <a class="link" href="https://github.com/danieliyahu1/keren-ai" target="_blank" rel="noopener noreferrer">GitHub <span class="arrow" aria-hidden="true">↗</span></a>
-        </div>
-        <div class="list-row" data-reveal>
-          <h3>Kaspa Simple MCP</h3>
-          <p>AI assistants read the Kaspa chain directly. Balances, transactions, blocks. No node required.</p>
-          <a class="link" href="https://github.com/danieliyahu1/kaspa-simple-mcp" target="_blank" rel="noopener noreferrer">GitHub <span class="arrow" aria-hidden="true">↗</span></a>
-        </div>
-      </div>
     </div>
   </section>
 
-  <section class="section section-rule" id="contact">
+  <section class="section section-rule section--closing" id="contact">
     <div class="shell">
-      <p class="eyebrow">Say hello</p>
-      <h2 class="contact-title">Let's build something worth owning.</h2>
-      <p class="contact-lede">If you're building something that needs to be owned — or you just want to talk shop — say hello.</p>
+      <p class="eyebrow">Contact</p>
+      <h2 class="contact-title">Say hello.</h2>
 
-      <div class="connect-grid">
-        <div data-reveal>
-          <p class="connect-ask">No form, no tracking, no newsletter. Just a person on the other end.</p>
-          <div class="reach">
-            <a href="mailto:danieliyahu1@gmail.com">
-              <span>Email</span>
-              <span class="arrow" aria-hidden="true">→</span>
-            </a>
-            <a href="https://www.linkedin.com/in/daniel-eliyahu-543a7017b/" target="_blank" rel="me noopener noreferrer">
-              <span>LinkedIn</span>
-              <span class="arrow" aria-hidden="true">→</span>
-            </a>
-            <a href="https://github.com/danieliyahu1" target="_blank" rel="me noopener noreferrer">
-              <span>GitHub</span>
-              <span class="arrow" aria-hidden="true">→</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="connect-side" data-reveal>
-          <p class="connect-note">Based in Israel · UTC+2, UTC+3 in summer.</p>
-        </div>
+      <div class="reach" data-reveal>
+        <a href="mailto:danieliyahu1@gmail.com">
+          <span>Email</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <a href="https://www.linkedin.com/in/daniel-eliyahu-543a7017b/" target="_blank" rel="me noopener noreferrer">
+          <span>LinkedIn</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <a href="https://github.com/danieliyahu1" target="_blank" rel="me noopener noreferrer">
+          <span>GitHub</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
       </div>
     </div>
   </section>
@@ -429,11 +368,9 @@
 
 <footer class="site-footer">
   <div class="shell">
-    <p class="footer-brand">Daniel Eliyahu<span class="dot">.</span></p>
-    <p class="footer-note">I go looking for what I don't know yet.</p>
-    <div class="footer-bottom">
+    <div class="footer-bottom footer-solo">
       <span>© <span data-year>2026</span> Daniel Eliyahu</span>
-      <span><a class="footer-top" href="#home">Back to top ↑</a> · Built by hand.</span>
+      <span><a class="footer-top" href="#home">Back to top ↑</a></span>
     </div>
   </div>
 </footer>
