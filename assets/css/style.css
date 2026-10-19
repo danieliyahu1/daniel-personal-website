@@ -1642,7 +1642,9 @@ html[data-nav-open="true"] .nav-toggle .icon-close {
 
 .case-body ul {
   margin: 18px 0 0;
+  padding-left: 0;
   border-top: 1px solid var(--line);
+  list-style: none;
 }
 
 .case-body li {

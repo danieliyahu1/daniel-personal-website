@@ -32,7 +32,7 @@
   <link rel="preload" href="assets/fonts/heebo-hebrew.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="assets/fonts/instrumentserif-400.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="assets/fonts/instrumentsans-400.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="assets/css/style.css?v=20261020c" />
+  <link rel="stylesheet" href="assets/css/style.css?v=20261020d" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -268,7 +268,7 @@
             <p class="stack"><span>TypeScript</span><span>Express</span><span>Turso</span><span>Kaspa</span></p>
             <div class="app-links">
               <a class="link" href="https://daftari.danieliyahu.com/" target="_blank" rel="noopener noreferrer">Open Daftari <span class="arrow" aria-hidden="true">↗</span></a>
-              <a class="link" href="#daftari">Case study <span class="arrow" aria-hidden="true">→</span></a>
+              <a class="link" href="#daftari">How it went <span class="arrow" aria-hidden="true">→</span></a>
               <a class="link" href="https://github.com/danieliyahu1/daftari" target="_blank" rel="noopener noreferrer">Code</a>
             </div>
           </div>
@@ -281,10 +281,10 @@
     <div class="shell">
       <div class="section-head">
         <div>
-          <p class="eyebrow">Case study</p>
+          <p class="eyebrow">Startup notes</p>
           <h2>The book that can't be cooked.</h2>
         </div>
-        <p>Daftari — savings groups where the chama is a wallet and the chain is the ledger.</p>
+        <p>Daftari was my attempt to build a startup around savings groups in East Africa. I built the MVP, did the research, and stopped. The problem was real; my solution wasn't native enough.</p>
       </div>
 
       <figure class="diagram" data-reveal>
@@ -311,6 +311,9 @@
       </figure>
 
       <div class="case-body">
+        <h3>Where it started</h3>
+        <p>At a mini hackathon run by <a href="https://www.nuraglobal.org/" target="_blank" rel="noopener noreferrer">Nura Global</a>, the conversation turned to payments in Africa. Someone from Kenya described the chama: a rotating savings group where members pay in on a schedule and one member takes the pot each round. I read about it afterwards, talked to friends who know the African market, and decided it was worth researching.</p>
+
         <h3>The problem</h3>
         <p>Rotating savings groups — chamas — run on trust and a book. Members pay in on a schedule; each round, one member takes the pot. It works because everyone knows each other, and because one person keeps the record. That record is usually paper, a spreadsheet, or a WhatsApp thread. It is also the thing people argue about.</p>
 
@@ -320,9 +323,18 @@
 
         <blockquote class="case-quote">If the record can be edited, it isn't a record.</blockquote>
 
-        <h3>What it took</h3>
-        <p>The hard part wasn't the transaction. It was making an on-chain group feel like a group: joining, being recognized, seeing who paid and who didn't, without turning the page into a block explorer. Mainnet readiness is less about code and more about edges — wallet onboarding for people who have never held a key, dispute flows that don't require me, and the moment a chama grows past the people who already trust each other.</p>
-        <p>That's the honest test. Not whether the transaction confirms — whether the group still works when it isn't a group of friends.</p>
+        <h3>The process</h3>
+        <p>The research and the build ran together. While the MVP was taking shape, I spoke with people from Kenya and Sudan on LinkedIn. They validated the problem. The record-keeping and the trust were real issues, not something I had imagined from a hackathon room. The prototype was how I tested whether I understood them.</p>
+
+        <h3>What I couldn't solve</h3>
+        <ul>
+          <li><strong>Privacy.</strong> The bet was that a record no one can edit is a record you can trust. The problem is that it's also a record everyone can read. A chama's book is shared among its members, not published to the world, and on a public chain every transaction is visible to anyone who knows the wallet. I don't have a good answer for that.</li>
+          <li><strong>The edges.</strong> Wallet onboarding for people who have never held a key, dispute flows that don't require me, and the moment a chama grows past the people who already trust each other.</li>
+        </ul>
+
+        <h3>Why I stopped</h3>
+        <p>The bigger problem was adoption. A chama is a group of people who already trust each other, and most would rather keep the system they know than move their money to an app built by someone outside their world. I'm not part of that market, and getting a group to try a new chama isn't a technical problem. Trust doesn't move because the code is better.</p>
+        <p>The trust was already there — in the group, and in the system they know. I wasn't part of it. That's why I stopped.</p>
 
         <div class="case-foot">
           <a class="button" href="https://daftari.danieliyahu.com/" target="_blank" rel="noopener noreferrer">Open Daftari</a>
