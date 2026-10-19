@@ -260,4 +260,69 @@
       document.fonts.ready.then(drawDag);
     }
   }
+
+  var copyButton = document.querySelector("[data-copy-email]");
+
+  if (copyButton) {
+    var copyStatus = document.querySelector(".copy-status");
+    var copyIdleLabel = copyButton.getAttribute("aria-label");
+    var copyDoneLabel = copyButton.getAttribute("data-label-copied") || "Copied";
+    var copyFailedLabel = copyButton.getAttribute("data-label-failed") || "Could not copy";
+    var copyReset;
+
+    var writeClipboard = function (text) {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        return navigator.clipboard.writeText(text);
+      }
+      return new Promise(function (resolve, reject) {
+        var field = document.createElement("textarea");
+        field.value = text;
+        field.setAttribute("readonly", "");
+        field.style.position = "fixed";
+        field.style.top = "-1000px";
+        document.body.appendChild(field);
+        field.select();
+        var ok = false;
+        try {
+          ok = document.execCommand("copy");
+        } catch (error) {
+          ok = false;
+        }
+        document.body.removeChild(field);
+        if (ok) {
+          resolve();
+        } else {
+          reject(new Error("copy failed"));
+        }
+      });
+    };
+
+    var resetCopyButton = function () {
+      copyButton.classList.remove("is-copied");
+      copyButton.setAttribute("aria-label", copyIdleLabel);
+      copyButton.setAttribute("title", copyIdleLabel);
+      if (copyStatus) {
+        copyStatus.textContent = "";
+      }
+    };
+
+    copyButton.addEventListener("click", function () {
+      writeClipboard(copyButton.getAttribute("data-copy-email"))
+        .then(function () {
+          copyButton.classList.add("is-copied");
+          copyButton.setAttribute("aria-label", copyDoneLabel);
+          copyButton.setAttribute("title", copyDoneLabel);
+          if (copyStatus) {
+            copyStatus.textContent = copyDoneLabel;
+          }
+          window.clearTimeout(copyReset);
+          copyReset = window.setTimeout(resetCopyButton, 2000);
+        })
+        .catch(function () {
+          if (copyStatus) {
+            copyStatus.textContent = copyFailedLabel;
+          }
+        });
+    });
+  }
 })();
