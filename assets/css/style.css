@@ -463,26 +463,6 @@ html[data-nav-open="true"] .nav-toggle .icon-close {
   line-height: 1.7;
 }
 
-.hero-note {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 22px;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-.hero-note::before {
-  content: "";
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--ember);
-}
-
 .hero-actions {
   margin-top: 30px;
 }
@@ -1177,10 +1157,6 @@ html[data-nav-open="true"] .nav-toggle .icon-close {
   max-width: 56ch;
   color: var(--ink-2);
   font-size: clamp(1rem, 1.5vw, 1.1rem);
-}
-
-.page-hero .hero-note {
-  margin-top: 18px;
 }
 
 /* ---------- Work ---------- */
