@@ -101,7 +101,6 @@
   --poster-ink: #f5f2ec;
   --poster-muted: #b7b0a3;
   --poster-line: rgba(245, 242, 236, 0.14);
-  --closing-line: rgba(255, 255, 255, 0.28);
   --frame-mat: var(--surface);
   --frame-line: var(--line);
   --maxw: 1120px;
@@ -130,7 +129,6 @@ html[data-theme="dark"] {
   --poster-ink: #f2eee6;
   --poster-muted: #a39b8d;
   --poster-line: rgba(242, 238, 230, 0.16);
-  --closing-line: rgba(23, 16, 12, 0.3);
   --frame-mat: #221e18;
   --frame-line: #3c362d;
   color-scheme: dark;
@@ -865,38 +863,27 @@ html[dir="rtl"] .case-meta strong {
   color: var(--poster-bg);
 }
 
-/* Full-bleed closing */
+/* Closing */
 .section--closing {
-  background: var(--ember);
-  color: var(--ember-ink);
-  border-top-color: var(--ember);
+  padding: clamp(40px, 5vw, 64px) 0;
 }
 
-.section--closing .eyebrow,
-.section--closing .contact-lede,
-.section--closing .connect-ask,
-.section--closing .connect-note {
-  color: var(--ember-ink);
+.section--closing .eyebrow {
+  margin: 0 0 12px;
+  text-align: center;
 }
 
-.section--closing .contact-title {
-  color: var(--ember-ink);
+.contact-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: clamp(16px, 2.4vw, 24px);
 }
 
-.section--closing .connect-grid,
-.section--closing .reach,
-.section--closing .reach a {
-  border-color: var(--closing-line);
-}
-
-.section--closing .reach a .arrow {
-  color: var(--ember-ink);
-  opacity: 0.7;
-}
-
-.section--closing .reach a:hover .arrow {
-  color: var(--ember-ink);
-  opacity: 1;
+.section--closing .button-ghost:hover {
+  border-color: var(--ember);
+  color: var(--ember);
 }
 
 .section-head {
@@ -1641,13 +1628,12 @@ html[dir="rtl"] .case-meta strong {
 }
 
 .contact-title {
-  max-width: 15ch;
-  margin: 14px 0 clamp(28px, 4vw, 40px);
+  margin: 0;
   font-family: var(--serif);
   font-weight: 400;
-  font-size: clamp(2.8rem, 6vw, 4.8rem);
-  line-height: 0.98;
-  letter-spacing: -0.025em;
+  font-size: clamp(2.2rem, 4.2vw, 3.2rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
 }
 
 .contact-lede {
@@ -1667,33 +1653,24 @@ html[dir="rtl"] .case-meta strong {
 }
 
 .reach {
-  max-width: 760px;
-  border-top: 1px solid var(--line);
-}
-
-.reach a {
   display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 20px 2px;
-  border-bottom: 1px solid var(--line);
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
 
-.reach a span:first-child {
-  font-family: var(--serif);
-  font-size: clamp(1.5rem, 2.8vw, 2rem);
-  line-height: 1;
-}
-
-.reach a .arrow {
+.reach .button-icon {
+  width: 52px;
+  min-width: 52px;
+  height: 52px;
+  padding: 0;
+  border: 0;
+  background: none;
   color: var(--muted);
-  transition: color 0.18s ease, transform 0.18s ease;
 }
 
-.reach a:hover .arrow {
+.reach .button-icon:hover {
   color: var(--ember);
-  transform: translateX(3px);
 }
 
 .connect-side h2 {
@@ -2093,7 +2070,6 @@ html[dir="rtl"] .case-meta strong {
 
   .button,
   .link .arrow,
-  .reach a .arrow,
   .about-tile {
     transition: none;
   }
@@ -2360,7 +2336,6 @@ html[lang="he"] .case-quote,
 html[lang="he"] .path-lead,
 html[lang="he"] .contact-title,
 html[lang="he"] .connect-ask,
-html[lang="he"] .reach a span:first-child,
 html[lang="he"] .proof strong {
   font-family: "Frank Ruhl Libre", "Instrument Serif", Georgia, serif;
   letter-spacing: 0;
@@ -2372,8 +2347,8 @@ html[lang="he"] .hero h1 {
 }
 
 html[lang="he"] .contact-title {
-  font-size: clamp(2.4rem, 5vw, 4rem);
-  line-height: 1.08;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
 }
 
 html[lang="he"] .path-lead {
@@ -2453,8 +2428,7 @@ html[dir="rtl"] .skip-link:focus {
   right: 16px;
 }
 
-html[dir="rtl"] .link:hover .arrow,
-html[dir="rtl"] .reach a:hover .arrow {
+html[dir="rtl"] .link:hover .arrow {
   transform: translateX(-3px);
 }
 
