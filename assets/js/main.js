@@ -140,9 +140,27 @@
       var paths = [];
       var rtl = window.getComputedStyle(dag).direction === "rtl";
 
+      // Group items into visual rows so the wrap line can be routed through
+      // the free band between two rows instead of through a tall neighbour.
+      var rects = items.map(function (el) {
+        return el.getBoundingClientRect();
+      });
+      var rows = [];
+      rects.forEach(function (rect) {
+        var row = rows[rows.length - 1];
+        if (!row || rect.top >= row.bottom - 2) {
+          row = { top: rect.top, bottom: rect.bottom };
+          rows.push(row);
+        } else {
+          row.top = Math.min(row.top, rect.top);
+          row.bottom = Math.max(row.bottom, rect.bottom);
+        }
+        rect.row = row;
+      });
+
       for (var i = 1; i < items.length; i++) {
-        var from = items[i - 1].getBoundingClientRect();
-        var to = items[i].getBoundingClientRect();
+        var from = rects[i - 1];
+        var to = rects[i];
         var ax = (rtl ? from.left : from.right) - wrapRect.left;
         var ay = from.top - wrapRect.top + from.height / 2;
         var bx = (rtl ? to.right : to.left) - wrapRect.left;
@@ -151,7 +169,9 @@
         if (Math.abs(ay - by) < 2) {
           paths.push({ d: "M" + ax + " " + ay + "H" + bx, wrap: false, from: i - 1 });
         } else {
-          var gapMid = from.bottom + (to.top - from.bottom) * 0.62 - wrapRect.top;
+          var rowBottom = from.row.bottom - wrapRect.top;
+          var rowTop = to.row.top - wrapRect.top;
+          var gapMid = rowBottom + Math.max(0, rowTop - rowBottom) / 2;
           var r = 8;
           var d;
 
