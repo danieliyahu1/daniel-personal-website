@@ -307,20 +307,29 @@ hr {
 }
 
 .theme-toggle {
-  padding: 7px 11px;
-  border: 1px solid var(--line);
-  border-radius: 2px;
-  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border: 0;
+  background: none;
   color: var(--muted);
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
 }
 
 .theme-toggle:hover {
   color: var(--ink);
-  border-color: var(--ink);
+}
+
+.theme-toggle .icon-sun {
+  display: none;
+}
+
+html[data-theme="dark"] .theme-toggle .icon-moon {
+  display: none;
+}
+
+html[data-theme="dark"] .theme-toggle .icon-sun {
+  display: block;
 }
 
 .header-tools {
@@ -333,20 +342,23 @@ hr {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 7px 10px;
-  border: 1px solid var(--line);
-  border-radius: 2px;
+  padding: 8px;
   color: var(--muted);
-  font-family: "Heebo", var(--sans);
-  font-size: 0.72rem;
-  font-weight: 500;
   line-height: 1;
   text-decoration: none;
 }
 
+.lang-toggle svg {
+  display: block;
+  transition: transform 0.18s ease;
+}
+
+.lang-toggle:hover svg {
+  transform: scale(1.08);
+}
+
 .lang-toggle:hover {
   color: var(--ink);
-  border-color: var(--ink);
   text-decoration: none;
 }
 

@@ -16,13 +16,6 @@
     root.dataset.theme = theme;
 
     var toggle = document.querySelector("[data-theme-toggle]");
-    var label = document.querySelector("[data-theme-label]");
-
-    if (label) {
-      var darkLabel = (toggle && toggle.dataset.labelDark) || "Dark";
-      var lightLabel = (toggle && toggle.dataset.labelLight) || "Light";
-      label.textContent = theme === "dark" ? lightLabel : darkLabel;
-    }
 
     if (toggle) {
       var darkAria = toggle.dataset.darkAria || "Switch to dark theme";
