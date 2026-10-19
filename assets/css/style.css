@@ -452,6 +452,10 @@ html[data-nav-open="true"] .nav-toggle .icon-close {
   color: var(--ember);
 }
 
+.hero h1 .accent {
+  color: var(--ember);
+}
+
 .hero-lede {
   max-width: 47ch;
   color: var(--ink-2);
@@ -481,6 +485,20 @@ html[data-nav-open="true"] .nav-toggle .icon-close {
 
 .hero-actions {
   margin-top: 30px;
+}
+
+/* Single-column hero, used until the portrait exists. */
+.hero-grid-solo {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.hero-grid-solo h1 {
+  max-width: 15ch;
+  font-size: clamp(3rem, 6.6vw, 5.6rem);
+}
+
+.hero-grid-solo .hero-lede {
+  max-width: 56ch;
 }
 
 /* ---------- Frames and figures ---------- */
@@ -835,6 +853,76 @@ html[data-nav-open="true"] .nav-toggle .icon-close {
 .path-steps p {
   color: var(--ink-2);
   font-size: 0.96rem;
+}
+
+/* ---------- About / who I am ---------- */
+
+.about-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(0, 0.55fr);
+  align-items: start;
+  gap: clamp(32px, 6vw, 72px);
+}
+
+.about-prose {
+  max-width: 64ch;
+}
+
+.about-prose p {
+  color: var(--ink-2);
+  font-size: 1.02rem;
+  line-height: 1.75;
+}
+
+.about-prose p + p {
+  margin-top: 16px;
+}
+
+.about-prose p:first-child {
+  color: var(--ink);
+}
+
+.about-facts h3 {
+  margin-bottom: 12px;
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.about-facts ul {
+  border-top: 1px solid var(--line);
+}
+
+.about-facts li {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.about-facts li span {
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.about-facts li strong {
+  color: var(--ink);
+  font-size: 0.92rem;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.about-note {
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.6;
 }
 
 /* ---------- Quote / invitation ---------- */
@@ -1601,7 +1689,8 @@ html[data-nav-open="true"] .nav-toggle .icon-close {
   .hero-grid,
   .project,
   .app,
-  .connect-grid {
+  .connect-grid,
+  .about-body {
     grid-template-columns: 1fr;
   }
 
