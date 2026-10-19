@@ -1722,7 +1722,7 @@ html[data-nav-open="true"] .nav-toggle .icon-close {
 }
 
 .footer-note {
-  max-width: 30ch;
+  max-width: 46ch;
   margin-top: 10px;
   color: var(--muted);
   font-size: 0.85rem;
