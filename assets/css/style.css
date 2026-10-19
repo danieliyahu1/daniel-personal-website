@@ -1168,45 +1168,6 @@ html[dir="rtl"] .case-meta strong {
   line-height: 1.55;
 }
 
-.about-tile-link {
-  margin-top: 18px;
-  color: var(--contrast-ink);
-  border-bottom-color: var(--contrast-line);
-}
-
-.about-tile-link--light {
-  color: var(--ink);
-  border-bottom-color: var(--line);
-}
-
-.about-tile-link:hover {
-  color: var(--ember);
-  border-bottom-color: var(--ember);
-}
-
-.about-tile--warm {
-  background: var(--ember-soft);
-}
-
-.about-tile--dark {
-  background: var(--contrast-bg);
-  border-color: var(--contrast-bg);
-  justify-content: center;
-}
-
-.about-tile--dark .about-tile-text {
-  color: var(--contrast-ink);
-}
-
-.about-tile--dark .about-tile-title {
-  color: var(--contrast-ink);
-}
-
-.about-tile--dark:hover,
-.about-tile--dark:focus-within {
-  border-color: var(--ember);
-}
-
 /* ---------- Life stations (block DAG, left to right) ---------- */
 
 .dag-wrap {
