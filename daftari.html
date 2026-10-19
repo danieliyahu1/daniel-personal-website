@@ -1,15 +1,157 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Redirecting — Daniel Eliyahu</title>
-  <meta name="robots" content="noindex" />
-  <link rel="canonical" href="https://danieliyahu.com/" />
-  <meta http-equiv="refresh" content="0; url=/#daftari" />
-  <script>location.replace("/#daftari");</script>
+  <title>Daftari — a startup case study — Daniel Eliyahu</title>
+  <meta name="theme-color" content="#f5f2ec" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0f0e0c" media="(prefers-color-scheme: dark)" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="canonical" href="https://danieliyahu.com/daftari.html" />
+  <link rel="alternate" hreflang="en" href="https://danieliyahu.com/daftari.html" />
+  <link rel="alternate" hreflang="he" href="https://danieliyahu.com/he-daftari.html" />
+  <link rel="alternate" hreflang="x-default" href="https://danieliyahu.com/daftari.html" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Daniel Eliyahu" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="he_IL" />
+  <meta property="og:title" content="Daftari — the book that can't be cooked" />
+  <meta property="og:url" content="https://danieliyahu.com/daftari.html" />
+  <meta property="og:image" content="https://danieliyahu.com/assets/img/og/home-v2.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Daftari — the book that can't be cooked" />
+  <meta name="twitter:image" content="https://danieliyahu.com/assets/img/og/home-v2.jpg" />
+
+  <script>(function(){try{var t=localStorage.getItem('dani-theme');if(t!=='light'&&t!=='dark'){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.dataset.theme=t;}catch(e){}})();</script>
+  <link rel="preload" href="assets/fonts/instrumentserif-400.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/instrumentsans-400.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="assets/css/style.css?v=20261020x" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "The book that can't be cooked",
+    "description": "Daftari was an attempt to put a savings group's book on-chain. The problem was real; my solution wasn't native enough.",
+    "url": "https://danieliyahu.com/daftari.html",
+    "author": { "@type": "Person", "name": "Daniel Eliyahu", "url": "https://danieliyahu.com/" }
+  }
+  </script>
 </head>
 <body>
-  <p><a href="/#daftari">Continue to Daftari</a></p>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="brand" href="index.html">Daniel Eliyahu</a>
+    <button type="button" class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
+      <svg class="icon-menu" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <svg class="icon-close" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </button>
+    <div class="nav-area" id="site-menu">
+      <nav class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#stations">Stations</a></li>
+          <li><a href="index.html#apps">Work</a></li>
+          <li><a href="index.html#contact">Say hello</a></li>
+        </ul>
+      </nav>
+      <div class="header-tools">
+        <a class="lang-toggle" href="he-daftari.html" hreflang="he" lang="he">עברית</a>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme"><span data-theme-label>Dark</span></button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+  <section class="section">
+    <div class="shell">
+      <a class="link case-back" href="index.html#apps"><span class="arrow" aria-hidden="true">←</span> All apps</a>
+
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Startup notes</p>
+          <h1>The book that can't be cooked.</h1>
+        </div>
+        <p>A startup around savings groups in East Africa. I built the MVP, did the research, and stopped — the problem was real, my solution wasn't native enough.</p>
+      </div>
+
+      <p class="case-meta">
+        <span><strong>Role</strong>Research · Product · Full-stack</span>
+        <span><strong>Stage</strong>MVP, stopped</span>
+        <span><strong>Stack</strong>TypeScript · Express · Turso · Kaspa</span>
+      </p>
+
+      <figure class="diagram" data-reveal>
+        <div class="flow">
+          <div class="flow-step">
+            <span class="flow-num">01</span>
+            <p class="flow-title">Members pay in</p>
+            <p>Each contribution is a real Kaspa transaction to the group's address.</p>
+          </div>
+          <div class="flow-arrow" aria-hidden="true">→</div>
+          <div class="flow-step">
+            <span class="flow-num">02</span>
+            <p class="flow-title">The chama wallet</p>
+            <p>The group is one wallet. Nobody holds it on the group's behalf.</p>
+          </div>
+          <div class="flow-arrow" aria-hidden="true">→</div>
+          <div class="flow-step">
+            <span class="flow-num">03</span>
+            <p class="flow-title">The chain keeps the book</p>
+            <p>Every payment is the record. The server can read it; it can't rewrite it.</p>
+          </div>
+        </div>
+        <figcaption>A chama is a wallet, not a database row.</figcaption>
+      </figure>
+
+      <div class="case-body">
+        <h2>Where it started</h2>
+        <p>At a <a href="https://www.nuraglobal.org/" target="_blank" rel="noopener noreferrer">Nura Global</a> hackathon, a conversation about payments in Africa turned to the chama: a rotating savings group where members pay in on a schedule and one takes the pot each round. I read about it, spoke to friends who know the market, and decided it was worth researching.</p>
+
+        <h2>The problem</h2>
+        <p>A chama runs on trust and a book. That book is usually paper, a spreadsheet, or a WhatsApp thread — and it's the thing people argue about.</p>
+
+        <h2>The design</h2>
+        <p>A chama in Daftari is a real Kaspa wallet, not a database row. Members pay in on-chain, signed in the browser with Kastle. A wallet can join only after it has transacted with the group. Names and memberships live in a database; the money never does.</p>
+
+        <blockquote class="case-quote">If the record can be edited, it isn't a record.</blockquote>
+
+        <h2>What I couldn't solve</h2>
+        <ul>
+          <li><strong>Privacy.</strong> A record no one can edit is also a record everyone can read. A chama's book belongs to its members, not the world.</li>
+          <li><strong>The edges.</strong> Onboarding people who have never held a key, disputes that don't require me, and groups that outgrow the people who already trust each other.</li>
+        </ul>
+
+        <h2>Why I stopped</h2>
+        <p>Adoption. A chama is a group of people who already trust each other, and most would rather keep the system they know than move their money to an app built by an outsider. I wasn't part of that trust, and trust doesn't move because the code is better.</p>
+
+        <h2>What I took from it</h2>
+        <p>The lesson wasn't technical. A record can be made trustworthy; a relationship can't be coded. Next time I'd start with the group and its trust, not with the chain.</p>
+
+        <div class="case-foot">
+          <a class="button" href="https://daftari.danieliyahu.com/" target="_blank" rel="noopener noreferrer">Open Daftari</a>
+          <a class="link" href="https://github.com/danieliyahu1/daftari" target="_blank" rel="noopener noreferrer">Read the code <span class="arrow" aria-hidden="true">↗</span></a>
+          <a class="link" href="index.html#apps">All apps <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="shell">
+    <div class="footer-bottom footer-solo">
+      <span>© <span data-year>2026</span> Daniel Eliyahu</span>
+      <span><a class="footer-top" href="#main">Back to top ↑</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js?v=20261020d" defer></script>
 </body>
 </html>

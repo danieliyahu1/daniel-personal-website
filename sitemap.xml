@@ -8,4 +8,12 @@
     <loc>https://danieliyahu.com/he.html</loc>
     <priority>0.9</priority>
   </url>
+  <url>
+    <loc>https://danieliyahu.com/daftari.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://danieliyahu.com/he-daftari.html</loc>
+    <priority>0.7</priority>
+  </url>
 </urlset>
