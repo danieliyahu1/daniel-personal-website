@@ -638,8 +638,54 @@ html[data-nav-open="true"] .nav-toggle .icon-close {
   transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.product-card:hover .frame img {
-  transform: scale(1.012);
+/* The screenshot is the link, so it carries the hover state. */
+.frame-link {
+  position: relative;
+  display: block;
+}
+
+.frame-link img {
+  display: block;
+}
+
+.frame-link::after {
+  content: "↗";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 0.9rem;
+  line-height: 1;
+  box-shadow: 0 4px 14px -6px rgba(21, 19, 15, 0.6);
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.frame-link:hover::after,
+.frame-link:focus-visible::after {
+  opacity: 1;
+  transform: none;
+}
+
+.product-card .frame {
+  transition: border-color 0.25s ease;
+}
+
+.product-card .frame:hover,
+.product-card .frame:focus-within {
+  border-color: var(--ember);
+}
+
+.frame-link:hover img,
+.frame-link:focus-visible img {
+  transform: scale(1.03);
 }
 
 .frame figcaption {
