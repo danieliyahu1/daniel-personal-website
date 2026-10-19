@@ -43,6 +43,42 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Heebo";
+  src: url("../fonts/heebo-hebrew.woff2") format("woff2");
+  font-weight: 400 600;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+
+@font-face {
+  font-family: "Heebo";
+  src: url("../fonts/heebo-latin.woff2") format("woff2");
+  font-weight: 400 600;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Frank Ruhl Libre";
+  src: url("../fonts/frankruhllibre-hebrew.woff2") format("woff2");
+  font-weight: 400 500;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+
+@font-face {
+  font-family: "Frank Ruhl Libre";
+  src: url("../fonts/frankruhllibre-latin.woff2") format("woff2");
+  font-weight: 400 500;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 /* ---------- Tokens ---------- */
 
 :root {
@@ -270,6 +306,33 @@ hr {
 .theme-toggle:hover {
   color: var(--ink);
   border-color: var(--ink);
+}
+
+.header-tools {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 10px;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  color: var(--muted);
+  font-family: "Heebo", var(--sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.lang-toggle:hover {
+  color: var(--ink);
+  border-color: var(--ink);
+  text-decoration: none;
 }
 
 .nav-toggle {
@@ -1437,10 +1500,14 @@ html[data-nav-open="true"] .nav-toggle .icon-close {
 
 .footer-top {
   color: var(--ink-2);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--line);
 }
 
 .footer-top:hover {
   color: var(--ember);
+  text-decoration-color: var(--ember);
 }
 
 /* ---------- 404 ---------- */
@@ -1669,7 +1736,7 @@ html[data-nav-open="true"] .nav-toggle .icon-close {
     text-decoration: none;
   }
 
-  .theme-toggle {
+  .header-tools {
     align-self: flex-start;
     margin-top: 6px;
   }
@@ -1727,9 +1794,10 @@ html[data-nav-open="true"] .nav-toggle .icon-close {
   .frame figcaption {
     font-size: 0.62rem;
     letter-spacing: 0.1em;
+    justify-content: flex-start;
   }
 
-  .frame figcaption span:last-child {
+  .frame figcaption > span:last-child {
     display: none;
   }
 
@@ -1743,6 +1811,129 @@ html[data-nav-open="true"] .nav-toggle .icon-close {
 
   .case-band {
     padding: 24px;
+  }
+}
+
+/* ---------- Hebrew / RTL ---------- */
+
+html[lang="he"] body {
+  font-family: "Heebo", "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+  line-height: 1.72;
+}
+
+html[lang="he"] .hero h1,
+html[lang="he"] .section-head h2,
+html[lang="he"] .case-body h3,
+html[lang="he"] .product-card h3,
+html[lang="he"] .quote p,
+html[lang="he"] .case-quote,
+html[lang="he"] .path-lead,
+html[lang="he"] .contact-title,
+html[lang="he"] .connect-ask,
+html[lang="he"] .reach a span:first-child,
+html[lang="he"] .proof strong {
+  font-family: "Frank Ruhl Libre", "Instrument Serif", Georgia, serif;
+  letter-spacing: 0;
+}
+
+html[lang="he"] .hero h1 {
+  font-size: clamp(3rem, 6.4vw, 5.8rem);
+  line-height: 1.06;
+}
+
+html[lang="he"] .contact-title {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  line-height: 1.08;
+}
+
+html[lang="he"] .path-lead {
+  max-width: none;
+  font-size: clamp(1.35rem, 2.4vw, 1.8rem);
+  line-height: 1.45;
+}
+
+html[lang="he"] .quote p {
+  line-height: 1.35;
+}
+
+html[lang="he"] .eyebrow,
+html[lang="he"] .proof span,
+html[lang="he"] .skills h3,
+html[lang="he"] .footer-grid h2 {
+  letter-spacing: 0.06em;
+  text-transform: none;
+}
+
+html[lang="he"] .hero-lede {
+  line-height: 1.8;
+}
+
+html[lang="he"] .case-body p {
+  line-height: 1.85;
+}
+
+html[lang="he"] .brand,
+html[lang="he"] .footer-brand {
+  font-family: "Instrument Serif", Georgia, serif;
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+html[lang="he"] .footer-brand {
+  text-align: right;
+}
+
+html[dir="rtl"] .proof > div + div {
+  padding-left: 0;
+  padding-right: clamp(16px, 3vw, 36px);
+  border-left: 0;
+  border-right: 1px solid var(--line);
+}
+
+html[dir="rtl"] .principle + .principle {
+  padding-left: 0;
+  padding-right: 30px;
+  border-left: 0;
+  border-right: 1px solid var(--line);
+}
+
+html[dir="rtl"] .case-quote {
+  padding-left: 0;
+  padding-right: 22px;
+  border-left: 0;
+  border-right: 2px solid var(--ember);
+}
+
+html[dir="rtl"] .diagram figcaption {
+  text-align: right;
+}
+
+html[dir="rtl"] .skip-link {
+  left: auto;
+  right: -9999px;
+}
+
+html[dir="rtl"] .skip-link:focus {
+  left: auto;
+  right: 16px;
+}
+
+html[dir="rtl"] .link:hover .arrow,
+html[dir="rtl"] .reach a:hover .arrow {
+  transform: translateX(-3px);
+}
+
+@media (max-width: 900px) {
+  html[dir="rtl"] .principle + .principle {
+    padding-right: 0;
+    border-right: 0;
+  }
+}
+
+@media (max-width: 620px) {
+  html[dir="rtl"] .proof > div + div {
+    padding-right: 14px;
+    padding-left: 0;
   }
 }
 

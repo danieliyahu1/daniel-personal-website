@@ -9,9 +9,14 @@
   <meta name="theme-color" content="#0f0e0c" media="(prefers-color-scheme: dark)" />
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
   <link rel="canonical" href="https://danieliyahu.com/" />
+  <link rel="alternate" hreflang="en" href="https://danieliyahu.com/" />
+  <link rel="alternate" hreflang="he" href="https://danieliyahu.com/he.html" />
+  <link rel="alternate" hreflang="x-default" href="https://danieliyahu.com/" />
 
   <meta property="og:type" content="profile" />
   <meta property="og:site_name" content="Daniel Eliyahu" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="he_IL" />
   <meta property="og:title" content="Daniel Eliyahu — Software people own." />
   <meta property="og:description" content="Five apps running, three contributed repos, and systems of record owned end to end." />
   <meta property="og:url" content="https://danieliyahu.com/" />
@@ -24,10 +29,11 @@
   <meta name="twitter:image" content="https://danieliyahu.com/assets/img/og/home.jpg" />
 
   <script>(function(){try{var t=localStorage.getItem('dani-theme');if(t!=='light'&&t!=='dark'){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.dataset.theme=t;}catch(e){}})();</script>
+  <link rel="preload" href="assets/fonts/heebo-hebrew.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="assets/fonts/instrumentserif-400.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="assets/fonts/instrumentsans-400.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" as="image" href="assets/img/apps/kaskama.jpg" fetchpriority="high" />
-  <link rel="stylesheet" href="assets/css/style.css?v=20261019e" />
+  <link rel="stylesheet" href="assets/css/style.css?v=20261019f" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -63,7 +69,10 @@
           <li><a href="#contact">Say hello</a></li>
         </ul>
       </nav>
-      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme"><span data-theme-label>Dark</span></button>
+      <div class="header-tools">
+        <a class="lang-toggle" href="he.html" hreflang="he" lang="he">עברית</a>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme"><span data-theme-label>Dark</span></button>
+      </div>
     </div>
   </div>
 </header>
@@ -502,7 +511,7 @@
   </div>
 </footer>
 
-<script src="assets/js/main.js?v=20261019e" defer></script>
+<script src="assets/js/main.js?v=20261019f" defer></script>
 </body>
 </html>
 

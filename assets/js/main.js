@@ -15,12 +15,19 @@
   function applyTheme(theme, persist) {
     root.dataset.theme = theme;
 
-    var label = document.querySelector("[data-theme-label]");
-    if (label) label.textContent = theme === "dark" ? "Light" : "Dark";
-
     var toggle = document.querySelector("[data-theme-toggle]");
+    var label = document.querySelector("[data-theme-label]");
+
+    if (label) {
+      var darkLabel = (toggle && toggle.dataset.labelDark) || "Dark";
+      var lightLabel = (toggle && toggle.dataset.labelLight) || "Light";
+      label.textContent = theme === "dark" ? lightLabel : darkLabel;
+    }
+
     if (toggle) {
-      toggle.setAttribute("aria-label", theme === "dark" ? "Switch to light theme" : "Switch to dark theme");
+      var darkAria = toggle.dataset.darkAria || "Switch to dark theme";
+      var lightAria = toggle.dataset.lightAria || "Switch to light theme";
+      toggle.setAttribute("aria-label", theme === "dark" ? lightAria : darkAria);
       toggle.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
     }
 
@@ -43,10 +50,13 @@
   var navToggle = document.querySelector("[data-nav-toggle]");
   var navArea = document.getElementById("site-menu");
   if (navToggle && navArea) {
+    var openLabel = navToggle.dataset.openLabel || "Open menu";
+    var closeLabel = navToggle.dataset.closeLabel || "Close menu";
+
     function closeNav(returnFocus) {
       navArea.classList.remove("open");
       navToggle.setAttribute("aria-expanded", "false");
-      navToggle.setAttribute("aria-label", "Open menu");
+      navToggle.setAttribute("aria-label", openLabel);
       root.dataset.navOpen = "false";
       document.body.style.overflow = "";
       if (returnFocus) navToggle.focus();
@@ -55,7 +65,7 @@
     navToggle.addEventListener("click", function () {
       var open = navArea.classList.toggle("open");
       navToggle.setAttribute("aria-expanded", open ? "true" : "false");
-      navToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+      navToggle.setAttribute("aria-label", open ? closeLabel : openLabel);
       root.dataset.navOpen = open ? "true" : "false";
       document.body.style.overflow = open ? "hidden" : "";
     });
@@ -78,6 +88,15 @@
       }
     });
   }
+
+  document.querySelectorAll(".lang-toggle").forEach(function (link) {
+    link.addEventListener("click", function () {
+      var hash = window.location.hash;
+      if (hash) {
+        link.href = link.getAttribute("href").split("#")[0] + hash;
+      }
+    });
+  });
 
   var year = document.querySelectorAll("[data-year]");
   year.forEach(function (el) {
