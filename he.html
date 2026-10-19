@@ -32,7 +32,7 @@
   <link rel="preload" href="assets/fonts/frankruhllibre-hebrew.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="assets/fonts/heebo-hebrew.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="assets/fonts/instrumentserif-400.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="assets/css/style.css?v=20261020c" />
+  <link rel="stylesheet" href="assets/css/style.css?v=20261020d" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -268,7 +268,7 @@
             <p class="stack"><span>TypeScript</span><span>Express</span><span>Turso</span><span>Kaspa</span></p>
             <div class="app-links">
               <a class="link" href="https://daftari.danieliyahu.com/" target="_blank" rel="noopener noreferrer">פתחו את Daftari <span class="arrow" aria-hidden="true">↗</span></a>
-              <a class="link" href="#daftari">מקרה בוחן <span class="arrow" aria-hidden="true">←</span></a>
+              <a class="link" href="#daftari">איך זה הלך <span class="arrow" aria-hidden="true">←</span></a>
               <a class="link" href="https://github.com/danieliyahu1/daftari" target="_blank" rel="noopener noreferrer">קוד</a>
             </div>
           </div>
@@ -281,10 +281,10 @@
     <div class="shell">
       <div class="section-head">
         <div>
-          <p class="eyebrow">מקרה בוחן</p>
+          <p class="eyebrow">הערות סטארטאפ</p>
           <h2>הספר שאי אפשר לזייף.</h2>
         </div>
-        <p>Daftari — קבוצות חיסכון שבהן הצ'אמה היא ארנק והשרשרת היא הספר.</p>
+        <p>Daftari היה הניסיון שלי להקים סטארטאפ סביב קבוצות חיסכון במזרח אפריקה. בניתי את ה-MVP, עשיתי את המחקר, ועצרתי. הבעיה הייתה אמיתית; הפתרון שלי לא היה מספיק מקומי.</p>
       </div>
 
       <figure class="diagram" data-reveal>
@@ -311,6 +311,9 @@
       </figure>
 
       <div class="case-body">
+        <h3>איפה זה התחיל</h3>
+        <p>בהאקתון מיני שארגן <a href="https://www.nuraglobal.org/" target="_blank" rel="noopener noreferrer">Nura Global</a>, השיחה עברה לתשלומים באפריקה. מישהו מקניה תיאר את הצ'אמה: קבוצת חיסכון מסתובבת שבה החברים משלמים לפי לוח זמנים וחבר אחד לוקח את הקופה בכל סבב. קראתי על זה אחר כך, דיברתי עם חברים שמכירים את השוק האפריקאי, והחלטתי שזה שווה מחקר.</p>
+
         <h3>הבעיה</h3>
         <p>קבוצות חיסכון מסתובבות — צ'אמות — רצות על אמון ועל ספר. החברים משלמים לפי לוח זמנים; בכל סבב, חבר אחד לוקח את הקופה. זה עובד כי כולם מכירים אחד את השני, וכי אדם אחד שומר על הרשומה. הרשומה הזו היא בדרך כלל נייר, גיליון אלקטרוני או שרשור וואטסאפ. היא גם הדבר שמתווכחים עליו.</p>
 
@@ -320,9 +323,18 @@
 
         <blockquote class="case-quote">אם אפשר לערוך את הרשומה, היא לא רשומה.</blockquote>
 
-        <h3>מה זה דרש</h3>
-        <p>החלק הקשה לא היה העסקה. הוא היה לגרום לקבוצה on-chain להרגיש כמו קבוצה: להצטרף, להיות מוכר, לראות מי שילם ומי לא, בלי להפוך את העמוד ל-block explorer. מוכנות ל-mainnet היא פחות עניין של קוד ויותר של קצוות — קליטת ארנקים למי שמעולם לא החזיק מפתח, תהליכי מחלוקת שלא דורשים אותי, והרגע שבו צ'אמה גדלה מעבר לאנשים שכבר סומכים אחד על השני.</p>
-        <p>זה המבחן הכנה. לא אם העסקה מאושרת — אם הקבוצה עדיין עובדת כשהיא לא קבוצה של חברים.</p>
+        <h3>התהליך</h3>
+        <p>המחקר והבנייה רצו יחד. בזמן שה-MVP קרם עור וגידים, דיברתי עם אנשים מקניה ומסודן בלינקדאין. הם אימתו את הבעיה. בעיות הרשומה והאמון היו אמיתיות, לא משהו שדמיינתי בחדר האקתון. האבטיפוס היה הדרך שלי לבדוק אם הבנתי אותן.</p>
+
+        <h3>מה לא הצלחתי לפתור</h3>
+        <ul>
+          <li><strong>פרטיות.</strong> ההימור היה שרשומה שאי אפשר לערוך היא רשומה שאפשר לסמוך עליה. הבעיה היא שהיא גם רשומה שכולם יכולים לקרוא. הספר של צ'אמה משותף בין החברים שלה, לא מפורסם לעולם, וברשת ציבורית כל עסקה גלויה לכל מי שמכיר את הארנק. אין לי תשובה טובה לזה.</li>
+          <li><strong>הקצוות.</strong> קליטת ארנקים למי שמעולם לא החזיק מפתח, תהליכי מחלוקת שלא דורשים אותי, והרגע שבו צ'אמה גדלה מעבר לאנשים שכבר סומכים אחד על השני.</li>
+        </ul>
+
+        <h3>למה עצרתי</h3>
+        <p>הבעיה הגדולה יותר הייתה אימוץ. צ'אמה היא קבוצה של אנשים שכבר סומכים אחד על השני, ורובם יעדיפו להישאר עם המערכת שהם מכירים מאשר להעביר את הכסף לאפליקציה של מישהו מבחוץ. אני לא חלק מהשוק הזה, ולהביא קבוצה לנסות צ'אמה חדשה זה לא בעיה טכנית. אמון לא עובר כי הקוד טוב יותר.</p>
+        <p>האמון כבר היה שם — בקבוצה, ובמערכת שהם מכירים. אני לא הייתי חלק ממנו. זו הסיבה שעצרתי.</p>
 
         <div class="case-foot">
           <a class="button" href="https://daftari.danieliyahu.com/" target="_blank" rel="noopener noreferrer">פתחו את Daftari</a>
