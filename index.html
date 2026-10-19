@@ -62,8 +62,8 @@
       <nav class="site-nav" aria-label="Primary">
         <ul>
           <li><a href="#about">Who I am</a></li>
+          <li><a href="#stations">Stations</a></li>
           <li><a href="#apps">Apps</a></li>
-          <li><a href="#experience">Work</a></li>
           <li><a href="#contact">Say hello</a></li>
         </ul>
       </nav>
@@ -103,25 +103,13 @@
         <p>Not a CV. The short version of how I got here, and what I care about.</p>
       </div>
 
-      <div class="about-body">
+      <div class="about-body about-body--solo">
         <div class="about-prose">
           <p>I was born and raised in Rehovot. After high school I did a mechina in Akko — a year to work out what I actually wanted — then the Paratroopers, where I became a combat commander. Reichman University came next, computer science, and then Cognyte, building backend systems that other people's work depended on.</p>
           <p>The timeline isn't the interesting part. What I'd tell you first is that I'm curious about almost everything, and curiosity tends to take me off the map. A desert over a beach, a trail that isn't on the map, a place with no sign at the entrance. I hike a lot, and the further from the parking lot the better.</p>
           <p>Off the trail it's bachata and yoga, and whatever I'm reading about AI and blockchain that month. I build my own things — five apps, self-custody tools on Kaspa — because making something is more interesting than waiting for someone else to.</p>
           <p>Underneath all of it is one idea: teach a person to fish. Don't hand someone a product they need permission to use — give them the thing itself. That's why the money in my apps moves between people instead of through a platform balance, why you sign in with a key you hold, and why this is a hand-written page instead of a profile on someone else's feed.</p>
           <p>And I don't wait for perfect. Progress beats perfection — shipping something real and then making it better is how everything here actually got built.</p>
-        </div>
-
-        <div class="about-facts" data-reveal>
-          <h3>At a glance</h3>
-          <ul>
-            <li><span>Born</span><strong>Rehovot</strong></li>
-            <li><span>Mechina</span><strong>Akko</strong></li>
-            <li><span>Service</span><strong>Paratroopers, combat commander</strong></li>
-            <li><span>Study</span><strong>B.Sc. Computer Science, Reichman University</strong></li>
-            <li><span>Work</span><strong>Backend engineer, Cognyte · 2024–2026</strong></li>
-            <li><span>Languages</span><strong>Hebrew, English</strong></li>
-          </ul>
           <p class="about-note">Right now I'm reading about AI and blockchain, and looking for the next trail nobody's on.</p>
         </div>
       </div>
@@ -132,6 +120,75 @@
     <div class="shell">
       <p data-reveal>My own corner of the internet. No feed, no algorithm, no one else's rules.</p>
       <cite data-reveal>Why this site exists</cite>
+    </div>
+  </section>
+
+  <section class="section section-rule" id="stations">
+    <div class="shell">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Life stations</p>
+          <h2>How I got here.</h2>
+        </div>
+      </div>
+
+      <div class="dag-wrap">
+        <svg class="dag-edges" aria-hidden="true" focusable="false"></svg>
+        <ol class="dag">
+        <li class="dag-stop" data-reveal>
+          <h3>Rehovot</h3>
+          <p>Born and raised.</p>
+        </li>
+        <li class="dag-stop" data-reveal>
+          <h3>Aharai</h3>
+          <p>Participant.</p>
+        </li>
+        <li class="dag-stop" data-reveal>
+          <h3>Mechina in Akko</h3>
+          <p>A year to work out what I actually wanted.</p>
+        </li>
+        <li class="dag-stop" data-reveal>
+          <h3>Paratroopers</h3>
+          <p>Combat commander.</p>
+        </li>
+        <li class="dag-stop" data-reveal>
+          <h3>Ma'ase Center</h3>
+          <p>Instructor.</p>
+        </li>
+        <li class="dag-stop" data-reveal>
+          <h3>Aharai Accelerator</h3>
+          <p>Entrepreneurship program.</p>
+        </li>
+        <li class="dag-stop dag-stop--fork" data-reveal>
+          <div class="dag-main">
+            <h3>Reichman University</h3>
+            <p>Computer science.</p>
+          </div>
+          <div class="dag-branches">
+            <div class="dag-branch">
+              <h3>WeCode</h3>
+              <p>Started as a university volunteer, then worked there.</p>
+            </div>
+            <div class="dag-branch">
+              <h3>Pulse</h3>
+              <p>Led the digital-health entrepreneurship program.</p>
+            </div>
+            <div class="dag-branch">
+              <h3>UpStart</h3>
+              <p>Selected for the entrepreneurial program.</p>
+            </div>
+          </div>
+        </li>
+        <li class="dag-stop" data-reveal>
+          <h3>Jazwares</h3>
+          <p>First industry job — the company's B2C site, on Node and React.</p>
+        </li>
+        <li class="dag-stop" data-reveal>
+          <h3>Cognyte</h3>
+          <p>Back end — systems other people's work depended on.</p>
+        </li>
+        </ol>
+      </div>
     </div>
   </section>
 
@@ -278,79 +335,6 @@
     </div>
   </section>
 
-  <section class="section section-rule" id="skills">
-    <div class="shell">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">Skills</p>
-          <h2>What I reach for.</h2>
-        </div>
-        <p>The stack behind the work, from the database to the deploy.</p>
-      </div>
-      <div class="skills">
-        <div>
-          <h3>Languages &amp; frameworks</h3>
-          <p>Java · Spring Boot<br />TypeScript · Node.js · React<br />Python</p>
-        </div>
-        <div>
-          <h3>Data &amp; messaging</h3>
-          <p>PostgreSQL · Elasticsearch<br />Kafka<br />Turso</p>
-        </div>
-        <div>
-          <h3>Infrastructure</h3>
-          <p>Docker · Kubernetes · Helm<br />CI/CD<br />MCP servers</p>
-        </div>
-      </div>
-      <p class="fine">B.Sc. Computer Science, Reichman University · Combat Commander, IDF Paratroopers · Hebrew, English</p>
-    </div>
-  </section>
-
-  <section class="section section-rule" id="experience">
-    <div class="shell">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">Experience</p>
-          <h2>Where I've shipped.</h2>
-        </div>
-        <p>Roles where the work had to survive contact with production.</p>
-      </div>
-
-      <div class="roles">
-        <article class="role" data-reveal>
-          <p class="role-date">2024–2026</p>
-          <div>
-            <h3>Backend Engineer</h3>
-            <p class="org">Cognyte · Israel</p>
-            <p>Shipped three production microservices that became the system of record for critical business data — design, delivery, and production support, owned end to end.</p>
-            <p>Replaced a legacy media pipeline with convert-on-demand. Files are processed only when someone asks to play them. Terabytes saved.</p>
-            <p>80% test coverage across them. Zero critical incidents.</p>
-            <p class="stack"><span>Java</span><span>Spring Boot</span><span>Kafka</span><span>PostgreSQL</span><span>Docker</span><span>Kubernetes</span></p>
-          </div>
-        </article>
-
-        <article class="role" data-reveal>
-          <p class="role-date">2023</p>
-          <div>
-            <h3>Full-Stack Developer Intern</h3>
-            <p class="org">Jazwares LLC</p>
-            <p>Built the company's B2C website on Node.js and React — a new direct-to-customer channel and smoother cross-functional workflows.</p>
-            <p class="stack"><span>Node.js</span><span>React</span><span>B2C</span></p>
-          </div>
-        </article>
-
-        <article class="role" data-reveal>
-          <p class="role-date">2018–2019</p>
-          <div>
-            <h3>Coding Instructor &amp; Marketing Referent</h3>
-            <p class="org">Google &amp; Reichman University Tech School</p>
-            <p>Taught Python to thirty students. Ran the Facebook campaigns that filled the program.</p>
-            <p class="stack"><span>Python</span><span>Teaching</span><span>Marketing</span></p>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
   <section class="section section-rule" id="open-source">
     <div class="shell">
       <div class="section-head">
@@ -468,7 +452,7 @@
   </div>
 </footer>
 
-<script src="assets/js/main.js?v=20261019g" defer></script>
+<script src="assets/js/main.js?v=20261020c" defer></script>
 </body>
 </html>
 

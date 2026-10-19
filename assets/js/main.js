@@ -127,4 +127,99 @@
       observer.observe(el);
     });
   }
+  var dag = document.querySelector(".dag");
+  var dagWrap = document.querySelector(".dag-wrap");
+  var dagSvg = document.querySelector(".dag-edges");
+
+  if (dag && dagWrap && dagSvg) {
+    var drawDag = function () {
+      var wrapRect = dagWrap.getBoundingClientRect();
+      var items = Array.prototype.filter.call(dag.children, function (el) {
+        return el.classList.contains("dag-stop");
+      });
+      var paths = [];
+
+      for (var i = 1; i < items.length; i++) {
+        var from = items[i - 1].getBoundingClientRect();
+        var to = items[i].getBoundingClientRect();
+        var ax = from.right - wrapRect.left;
+        var ay = from.top - wrapRect.top + from.height / 2;
+        var bx = to.left - wrapRect.left;
+        var by = to.top - wrapRect.top + to.height / 2;
+
+        if (Math.abs(ay - by) < 2) {
+          paths.push({ d: "M" + ax + " " + ay + "H" + bx, wrap: false, from: i - 1 });
+        } else {
+          var gapMid = from.bottom + (to.top - from.bottom) * 0.62 - wrapRect.top;
+          var r = 8;
+          var xOut = ax + 8;
+          var xIn = bx - 14;
+
+          paths.push({
+            d:
+              "M" + ax + " " + ay +
+              "H" + (xOut - r) +
+              "Q" + xOut + " " + ay + " " + xOut + " " + (ay + r) +
+              "V" + (gapMid - r) +
+              "Q" + xOut + " " + gapMid + " " + (xOut - r) + " " + gapMid +
+              "H" + (xIn + r) +
+              "Q" + xIn + " " + gapMid + " " + xIn + " " + (gapMid + r) +
+              "V" + (by - r) +
+              "Q" + xIn + " " + by + " " + (xIn + r) + " " + by +
+              "H" + bx,
+            wrap: true,
+            from: i - 1
+          });
+        }
+      }
+
+      dagSvg.setAttribute("width", wrapRect.width);
+      dagSvg.setAttribute("height", wrapRect.height);
+
+      while (dagSvg.firstChild) {
+        dagSvg.removeChild(dagSvg.firstChild);
+      }
+
+      var defs = document.createElementNS("http://www.w3.org/2000/svg", "defs");
+      defs.innerHTML =
+        '<marker id="dag-arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="5" markerHeight="5" orient="auto">' +
+        '<path d="M0 0 L6 3 L0 6 Z" fill="currentColor"></path></marker>';
+      dagSvg.appendChild(defs);
+
+      paths.forEach(function (p) {
+        var path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        path.setAttribute("d", p.d);
+        path.setAttribute("class", p.wrap ? "dag-edge dag-edge--wrap" : "dag-edge");
+        path.setAttribute("data-from", String(p.from));
+        if (p.wrap) path.setAttribute("marker-end", "url(#dag-arrow)");
+        dagSvg.appendChild(path);
+      });
+    };
+
+    var dagItems = Array.prototype.filter.call(dag.children, function (el) {
+      return el.classList.contains("dag-stop");
+    });
+
+    var highlightEdge = function (index) {
+      Array.prototype.forEach.call(dagSvg.querySelectorAll(".dag-edge"), function (path) {
+        path.classList.toggle("is-hot", Number(path.getAttribute("data-from")) === index);
+      });
+    };
+
+    dagItems.forEach(function (item, index) {
+      item.addEventListener("mouseenter", function () {
+        highlightEdge(index);
+      });
+      item.addEventListener("mouseleave", function () {
+        highlightEdge(-1);
+      });
+    });
+
+    drawDag();
+    window.addEventListener("resize", drawDag);
+
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(drawDag);
+    }
+  }
 })();
