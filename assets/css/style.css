@@ -1055,6 +1055,40 @@ html[dir="rtl"] .case-meta strong {
   color: var(--ember);
 }
 
+/* Name on one side, live/offline on the other: the grid reads as an inventory. */
+.app-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4px 14px;
+}
+
+.product-card .app-status {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: 7px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.app-status::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.product-card .app-status--live {
+  color: var(--ember);
+}
+
 /* The featured card stacks its links, so the GitHub mark gets its own row. */
 .product-featured .app-links {
   flex-direction: column;
